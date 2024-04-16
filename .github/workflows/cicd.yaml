@@ -16,7 +16,10 @@ jobs:
         run: npm install -g netlify-cli
       
       - name: Initialize Netlify Project
-        run: netlify sites:create --name pfi-bkm-personal-information-v1-mfe-actions --account-slug purpose-financial && netlify deploy --dir=/dist --prod
+        run: |
+              SITE_DATA=$(netlify sites:create --name pfi-bkm-personal-information-v1-mfe-actions --account-slug team-purpose)
+              echo &quot;$SITE_DATA&quot;
+              SITE_ID=$(echo &quot;$SITE_DATA&quot; | grep &#39;Site ID:&#39; | awk &#39;{{print $3}}&#39;)
+              echo &quot;SITE_ID=$SITE_ID&quot; &gt;&gt; $GITHUB_ENV
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-
