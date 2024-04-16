@@ -16,7 +16,7 @@ jobs:
         run: npm install -g netlify-cli
       
       - name: Initialize Netlify Project
-        run: netlify sites:create --name pfi-bkm-personal-information-v1-mfe-actions --account-slug team-purpose && netlify deploy --dir=/dist --prod
+        run: netlify sites:create --name pfi-bkm-personal-information-v1-mfe-actions --account-slug purpose-financial && netlify deploy --dir=/dist --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
