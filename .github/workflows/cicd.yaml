@@ -12,7 +12,7 @@ jobs:
           github-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           publish-dir: ./dist
           production-branch: develop
-          netlify-site-name: pfi-bkm-lap-dashboard-v1-mfe
+          alias: "pfi-bkm-lap-dashboarddd-v1-mfe"
           deploy-message: Deploy from GitHub Actions
           enable-pull-request-comment: false
           enable-commit-comment: true
