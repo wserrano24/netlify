@@ -17,7 +17,7 @@ jobs:
       
       - name: Initialize Netlify Project
         run: |
-              SITE_DATA=$(netlify sites:create --name pfi-bkm-personal-information-v1-mfe-actions --account-slug team-purpose)
+              SITE_DATA=$(netlify sites:create --name pfi-bkm-personal-information-v1-mfe-actions-test --account-slug team-purpose)
               echo &quot;$SITE_DATA&quot;
               SITE_ID=$(echo &quot;$SITE_DATA&quot; | grep &#39;Site ID:&#39; | awk &#39;{{print $3}}&#39;)
               echo &quot;SITE_ID=$SITE_ID&quot; &gt;&gt; $GITHUB_ENV
