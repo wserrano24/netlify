@@ -3,26 +3,23 @@ on:
   push:
   pull_request:
 jobs:
-  deploy:
+  deploy-production:
+    name: Deploy production site
     runs-on: ubuntu-latest
+    if: always()
+    environment:
+      name: production
+      url: ${{ steps.deploy_production.outputs.netlify-deploy-url }}
     steps:
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v3.0
-        with:
-          github-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          publish-dir: ./dist
-          production-branch: develop
-          alias: "pfi-bkm-lap-dashboarddd-v1-mfe"
-          deploy-message: Deploy from GitHub Actions
-          enable-pull-request-comment: false
-          enable-commit-comment: true
-          overwrites-pull-request-comment: true
-      - name: Deploy to Netlify 🚀
-        uses: data-intuitive/netlify-deploy-site@v1
-        with:
-          auth: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          site: "pfi-bkm-lap-dashboarddd-v1-mfe"
-          dir: '_site'
-          prod: true
-          message: 'Deploy production ${{ github.ref }}'
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
 
+      - name: Deploy production site
+        id: deploy_production
+        uses: ./
+        with:
+          auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          site: "pfi-bkm-personal-informationn-v1-mfe"
+          dir: sites/production
+          prod: true
