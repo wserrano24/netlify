@@ -11,7 +11,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_AUTH_TOKEN: "nfp_45oNycghjHD2eShaAiLdxwjBQXNejd7za901"
           publish-dir: './dist'
           production-branch: develop
           netlify-site-name: "pfi-bkm-lap-dashboard-v1-mfe"
