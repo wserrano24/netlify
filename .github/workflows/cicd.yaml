@@ -3,23 +3,24 @@ on:
   push:
   pull_request:
 jobs:
-  deploy-production:
-    name: Deploy production site
-    runs-on: ubuntu-latest
-    if: always()
-    environment:
-      name: production
-      url: ${{ steps.deploy_production.outputs.netlify-deploy-url }}
+  build:
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
-        id: checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Deploy production site
-        id: deploy_production
-        uses: ./
+      # ( Build to ./dist or other directory... )
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
         with:
-          auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          site: "pfi-bkm-personal-informationn-v1-mfe"
-          dir: sites/production
-          prod: true
+          publish-dir: './test'
+          production-branch: develop
+          github-token: ${{ secrets.TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: "f97130f6-264c-4821-be6f-f16e8f631861"
+        timeout-minutes: 1
