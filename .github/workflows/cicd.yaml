@@ -6,15 +6,24 @@ on:
       - master
 
 jobs:
-  init:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
-          - name: Checkout code
-            uses: actions/checkout@v2
-          - name: List files in working directory
-            run: ls -la
-          - name: Link GitHub Repository
-            run: netlify link --id 84934ec4-08f3-4e3d-acf5-b224b85c15ac
-            env:
-              #NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-              NETLIFY_AUTH_TOKEN: "nfp_v6V4gcmStJXdSaQAx1W15sqYFX9bVB4M2bd3"
+    - name: Checkout code
+      uses: actions/checkout@v2
+  
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+    
+    - name: Install Dependencies
+      run: npm install
+    
+    - name: Install Netlify CLI
+      run: npm install netlify-cli -g
+    
+    - name: Link GitHub Repository
+      run: netlify link --id 84934ec4-08f3-4e3d-acf5-b224b85c15ac
+      env:
+        NETLIFY_AUTH_TOKEN:  "nfp_v6V4gcmStJXdSaQAx1W15sqYFX9bVB4M2bd3"
