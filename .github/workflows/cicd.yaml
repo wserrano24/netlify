@@ -24,6 +24,6 @@ jobs:
       run: npm install netlify-cli -g
     
     - name: Link GitHub Repository
-      run: netlify link --id 84934ec4-08f3-4e3d-acf5-b224b85c15ac
+      run: netlify link --id "84934ec4-08f3-4e3d-acf5-b224b85c15ac"
       env:
         NETLIFY_AUTH_TOKEN:  "nfp_v6V4gcmStJXdSaQAx1W15sqYFX9bVB4M2bd3"
