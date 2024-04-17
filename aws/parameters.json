@@ -1,0 +1,13 @@
+{
+	"nameMicrofront": "pfi-bkm-mfe-lap-dashboard-v1",
+	"Parameters": {
+		"dev": {
+			"distributionId" : "E3EJ2IDU3HX7HE",
+			"bucketName" : "s3-portal3-advance-ms-dev"
+		},
+		"qa": {
+			"distributionId" : "distributionIdQA",
+			"bucketName" : "bucketNameQA"
+		}
+	}
+}

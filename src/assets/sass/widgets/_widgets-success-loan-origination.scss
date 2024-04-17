@@ -1,0 +1,65 @@
+.theme-loan-origination-success {
+  background-color: $aa-day-blue;
+  margin: 0;
+
+  p {
+    font-size: $font-size-md;
+  }
+
+  &-description {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+
+    &-content {
+      padding: 0;
+    }
+  }
+
+  .theme-application-description {
+    padding: 0 $spacing-3xl;
+  }
+
+  @include media-breakpoint-up(md) {
+    h1 {
+      font-size: $font-size-xxl;
+    }
+
+    &-header-mobile,
+    &-description-content-image-mobile {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: $font-size-xl;
+    }
+
+    background: $aa-day-blue url('@/assets/images/modal_bg.png') -16rem 28rem no-repeat;
+
+    &-description-content-image {
+      &-mobile {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      &-desktop {
+        display: none;
+      }
+
+    }
+
+    &-header-mobile {
+      padding-top: $spacing-m;
+      text-align: center;
+    }
+  }
+}

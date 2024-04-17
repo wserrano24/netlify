@@ -1,0 +1,12 @@
+.theme-layout-product-details {
+  min-height: 100vh;
+  padding-bottom: $spacing-m;
+
+  @include media-breakpoint-up(xl) {
+    padding: $spacing-xxl $spacing-6xl;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: $spacing-xxl $spacing-3xl;
+  }
+}

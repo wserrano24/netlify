@@ -1,0 +1,58 @@
+.theme-summary-card {
+  background-color: $aa-day-blue-light;
+  border-radius: $border-radius;
+  margin-bottom: $spacing-m;
+  padding: $spacing-l;
+
+  &-header {
+    border-bottom: 1px solid $aa-marble;
+    margin-bottom: $spacing-m;
+    padding-bottom: $spacing-m;
+
+    a,
+    .btn-link {
+      color: $aa-dark-blue;
+      font-weight: $theme-font-weight-bold;
+    }
+
+    .btn-link {
+      font-family: $theme-font-family-base;
+      padding: 0;
+      text-decoration: underline;
+    }
+
+    &-invalid {
+      color: $aa-red;
+    }
+  }
+
+  dl {
+    margin-bottom: 0;
+
+    dt {
+      font-weight: normal;
+    }
+
+    dd {
+      font-weight: $theme-font-weight-bold;
+      margin-bottom: $spacing-m;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .theme-summary-card-delete-link {
+    color: $aa-red;
+    font-family: $theme-font-family-base;
+    font-weight: $theme-font-weight-bold;
+    height: auto;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .theme-text-danger {
+    color: $aa-red;
+  }
+}

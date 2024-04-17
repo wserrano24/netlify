@@ -1,0 +1,233 @@
+@mixin menu-hover-color {
+  color: $aa-day-blue;
+}
+
+.theme-navbar {
+  @include tablet-layout-spacing;
+
+  background-color: $aa-day-blue-light;
+  color: $aa-white;
+  position: fixed;
+  transition: transform 0.3s ease-out;
+  width: 100%;
+  z-index: $theme-navigation-z-index;
+
+  .theme-brand-logo-desktop,
+  .theme-user-name-desktop,
+  .theme-btn-desktop,
+  .theme-menu-links-desktop {
+    display: none;
+  }
+
+  &--hide {
+    // translate value should be equal or greater than height of the header
+    transform: translateY(-9.375rem);
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: $spacing-l;
+  }
+
+  .theme-user-name-mobile {
+    @include ellipses;
+
+    width: 70%;
+  }
+
+  .theme-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-color: $aa-dark-blue;
+    padding: $spacing-xl 0;
+
+    .theme-brand-logo-desktop {
+      margin-right: $spacing-3xl;
+      vertical-align: unset;
+    }
+
+    .theme-brand-logo-mobile,
+    .theme-user-name-mobile,
+    .theme-menu-links-mobile {
+      display: none;
+    }
+
+    .theme-btn-desktop {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .theme-brand-logo-desktop,
+    .theme-user-name-desktop,
+    .theme-notification-btn,
+    .theme-menu-links-desktop {
+      display: inline-block;
+    }
+
+    .theme-user-icon {
+      margin: 0 $spacing-xl;
+    }
+  }
+
+  .theme-nav-link {
+    color: $aa-white;
+  }
+
+  .theme-navbar-content {
+    background: $aa-dark-blue;
+    overflow-y: auto;
+    padding: 0 $spacing-m;
+
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .theme-nav-header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin: $spacing-3xl 0;
+
+      @include media-breakpoint-up(lg) {
+        margin: 0;
+        order: 2;
+      }
+    }
+
+    .theme-user-name {
+      font-family: $theme-font-family-secondary;
+      font-size: $font-size-lg;
+      font-weight: $theme-font-weight-bold;
+      letter-spacing: -0.02em;
+      line-height: $theme-line-height-md;
+      margin: 0;
+      text-transform: capitalize;
+    }
+
+    .theme-nav-footer {
+      align-items: flex-end;
+      display: flex;
+      flex-grow: 1;
+      padding-bottom: $spacing-xxl;
+    }
+
+    .theme-menubar {
+      padding: 0;
+
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        margin: 0;
+      }
+    }
+
+    .theme-menuitem {
+      margin-bottom: $spacing-l;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+        margin-right: $spacing-xl;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .theme-profile-menu-logout {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    .theme-nav-link,
+    .theme-profile-menu-logout button {
+      font-family: $theme-font-family-secondary;
+      font-size: $font-size-mdl;
+      font-weight: $theme-font-weight-bold;
+      line-height: $theme-line-height-md;
+      padding: 0;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-sm;
+      }
+    }
+
+    .theme-nav-link {
+      &:hover {
+        @include menu-hover-color;
+      }
+    }
+
+    .active-link {
+      @include menu-hover-color;
+    }
+
+    .theme-profile-menu-logout button {
+      color: $white;
+      font-size: $font-size-sm;
+      text-decoration: none;
+    }
+
+    .theme-notification-btn {
+      position: relative;
+    }
+  }
+
+
+  .theme-skeleton-loader {
+    margin-bottom: 0;
+
+    &.theme-user-icon {
+      min-width: 2rem;
+    }
+
+    .placeholder {
+      &::after,
+      &::before {
+        height: 0;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      color: $aa-white;
+      min-width: 5rem;
+    }
+  }
+}
+
+.theme-navbar-notification {
+  display: inline-block;
+  position: relative;
+
+  &-dot {
+    $notification-dot-dimension: 0.625rem;
+
+    width: $notification-dot-dimension;
+    height: $notification-dot-dimension;
+    background: $aa-goldenrod;
+    border: 1px solid $aa-marble;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+  }
+}
+
+// For small devices in 200% zoom mode
+@media (max-width: 300px) {
+  .theme-navbar .theme-user-name-mobile {
+    width: 50%;
+  }
+}

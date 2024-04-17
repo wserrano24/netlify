@@ -1,0 +1,13 @@
+.theme-loan-tracker-banner {
+  align-items: center;
+  background-color: $aa-green-lighter;
+  color: $aa-black-blue;
+  column-gap: $spacing-s;
+  display: flex;
+  font-family: $theme-font-family-base;
+  font-size: $font-size-xs;
+  font-weight: $theme-font-weight-light;
+  justify-content: center;
+  padding: $spacing-s;
+  height: 32px;
+}

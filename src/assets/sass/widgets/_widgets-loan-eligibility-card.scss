@@ -1,0 +1,58 @@
+.theme-loan-eligibility-card {
+  background-color: $aa-day-blue;
+
+  // TODO: Need to remove border once we remove card border from BaseCard component.
+  border: none;
+  box-shadow: $pf-box-shadow;
+  overflow: hidden;
+  position: relative;
+
+  &-background {
+    width: 8rem;
+    height: 9.5rem;
+    background-repeat: no-repeat;
+    background-size: 8rem 9.5rem;
+    bottom: 0;
+    position: absolute;
+    right: 0.75rem;
+
+    @include media-breakpoint-up(lg) {
+      width: 9rem;
+      height: 10.625rem;
+      background-size: 9rem 10.625rem;
+      right: 20%;
+    }
+  }
+
+  &.card {
+    .card-body {
+      padding: $spacing-l $spacing-l $spacing-3xl $spacing-l;
+    }
+  }
+
+  &-content {
+    margin-bottom: $spacing-3xl;
+
+    h2 {
+      font-family: $theme-font-family-secondary;
+      font-size: $font-size-lg;
+      font-weight: $theme-font-weight-bold;
+      letter-spacing: -0.02em;
+      line-height: $theme-line-height-md;
+      margin-bottom: $spacing-s;
+
+      @include media-breakpoint-up(sm) {
+        font-size: $font-size-xl;
+        line-height: $theme-line-height-sm;
+      }
+    }
+
+    p {
+      font-family: $theme-font-family-base;
+      font-size: $font-size-sm;
+      font-weight: $theme-font-weight-light;
+      line-height: $theme-line-height-md;
+      margin-bottom: 0;
+    }
+  }
+}

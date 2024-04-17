@@ -1,0 +1,11 @@
+.theme-form-step-submit {
+  margin-top: $spacing-xxl;
+
+  .progress-bar-container {
+    margin-bottom: $spacing-m;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: $spacing-l;
+    }
+  }
+}

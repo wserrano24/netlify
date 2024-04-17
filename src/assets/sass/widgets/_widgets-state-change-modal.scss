@@ -1,0 +1,11 @@
+.theme-home-address-state-change-modal-button {
+  @include link-primary;
+
+  font-size: $font-size-sm;
+  font-weight: $theme-font-weight-bold;
+  padding-top: 0;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $spacing-m;
+  }
+}

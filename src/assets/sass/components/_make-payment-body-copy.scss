@@ -1,0 +1,47 @@
+.theme-make-payment-body-copy {
+  h1 {
+    font-size: $font-size-lg;
+    letter-spacing: -0.0425rem;
+    margin-bottom: $spacing-m;
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &-transparent {
+    text-align: center;
+
+    p {
+      font-size: $font-size-mdl;
+    }
+  }
+
+  p {
+    font-size: $font-size-md;
+
+    &:last-of-type {
+      margin-bottom: $spacing-xl;
+    }
+  }
+
+  &-center {
+    >* {
+      @include media-breakpoint-up(md) {
+        text-align: center;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: $spacing-m;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: $spacing-l;
+    }
+  }
+
+  &-bold {
+    font-weight: $theme-font-weight-bold;
+  }
+}

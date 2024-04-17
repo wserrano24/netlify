@@ -1,0 +1,49 @@
+// CARDS
+
+.theme-arrow-card {
+  background: $aa-day-blue-light;
+  border: none;
+  border-radius: $theme-border-radius;
+  box-shadow: $pf-box-shadow;
+  margin-bottom: $spacing-m;
+
+  p {
+    margin: 0;
+  }
+
+  .card-header {
+    background-color: $aa-day-blue;
+    font-family: $theme-font-family-secondary;
+    font-weight: $theme-form-label-font-weight;
+  }
+
+  .card-body {
+    padding-bottom: $spacing-l;
+    padding-top: $spacing-l;
+  }
+
+  .card-title {
+    font-weight: $theme-form-label-font-weight;
+  }
+
+  &.is-recommended {
+    background-color: $aa-dark-blue;
+
+    .card-title,
+    .card-text {
+      color: $white;
+    }
+
+    .card-text {
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .theme-arrow-card-icon {
+    width: 100%;
+  }
+}

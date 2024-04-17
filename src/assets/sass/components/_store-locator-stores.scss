@@ -1,0 +1,160 @@
+.theme-stores-list {
+  color: $aa-black-blue;
+
+  &-store {
+    background: $aa-day-blue-light;
+    border-radius: $theme-border-radius;
+    margin-bottom: $spacing-m;
+    padding: $spacing-m;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacing-s;
+      padding: $spacing-l;
+    }
+  }
+
+  &-info {
+    background: rgba($aa-grey, .1);
+    border-radius: $theme-border-radius;
+    margin-top: $spacing-m;
+    padding: $spacing-m;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: $spacing-xl;
+      padding: $spacing-l $spacing-m;
+    }
+
+    &-tel {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        font-size: $font-size-sm;
+
+        span {
+          display: block;
+          font-weight: $theme-font-weight-bold;
+        }
+      }
+
+      button {
+        background: $white;
+      }
+    }
+
+    &-header {
+      display: flex;
+      font-size: $font-size-sm;
+      justify-content: space-between;
+
+      &-hours {
+        font-weight: $theme-font-weight-bold;
+      }
+    }
+
+    &-days {
+      margin-bottom: $spacing-xl;
+
+      ul {
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+          margin-bottom: $spacing-s;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    font-size: $font-size-md;
+    justify-content: space-between;
+    margin-bottom: $spacing-m;
+
+    &-description {
+      font-weight: $theme-font-weight-bold;
+
+      // Applies only for tablet portrait
+      @include media-breakpoint-down(lg) {
+        width: 60%;
+      }
+
+      // Set the default width in mobile
+      @include media-breakpoint-down(sm) {
+        width: auto;
+      }
+    }
+
+    &-open {
+      font-size: $font-size-sm;
+      font-weight: $theme-font-weight-light;
+    }
+  }
+
+  &-address {
+    display: flex;
+    justify-content: space-between;
+
+    &-value {
+      font-size: $font-size-sm;
+      width: 80%;
+    }
+
+    &-distance {
+      font-size: $font-size-md;
+      font-weight: $theme-font-weight-bold;
+      text-align: right;
+      width: 20%;
+    }
+  }
+
+  &-details {
+    display: flex;
+    justify-content: space-between;
+
+    &-label {
+      font-size: $font-size-sm;
+      font-weight: $theme-font-weight-bold;
+      margin-bottom: 0;
+    }
+
+    button {
+      margin-right: -0.75rem;
+      transition: transform 500ms ease;
+
+      &.show {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-no-available {
+    font-size: 1.125rem;
+    font-weight: $theme-font-weight-bold;
+  }
+}
+
+// For small devices in 200% zoom mode
+@media (max-width: 300px) {
+  .theme-stores-list-info-days li {
+    flex-direction: column;
+  }
+
+  .theme-stores-list-info-tel {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .theme-stores-list-info-tel .btn {
+    margin-top: $spacing-m;
+  }
+}

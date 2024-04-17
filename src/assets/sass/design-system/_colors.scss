@@ -1,0 +1,42 @@
+/*
+NOTE: Colors are sourced from the Figma PF Design Kit and should match it 1:1.
+If a color doesn't exist here, it should not be added to this file unless it has been approved by design team and added to the design kit first.
+*/
+
+@use 'sass:color';
+
+// AA Brand
+$aa-yellow: #ffe700;
+$aa-light-blue: #27aae1;
+$aa-dark-blue: #0e406a;
+
+// AA Functional
+$aa-goldenrod: #ffc429;
+$aa-goldenrod-light: #ffedbf;
+$aa-goldenrod-lighter: #ffeecc;
+$aa-red: #d4353f;
+$aa-red-light: #f2c2c5;;
+$aa-red-lighter: #fbebec;
+$aa-green: #058e2c;
+$aa-green-light: #b4ddc0;
+$aa-green-lighter: #e6f4ea;
+$aa-day-blue: #bee6f6;
+$aa-day-blue-light: #ecf8fc;
+$aa-day-blue-lighter: #f8fcfe;
+
+// AA Gradients
+$aa-y-gradient: linear-gradient(225deg, $aa-yellow 14.18%, $aa-goldenrod 83.87%);
+$aa-b-gradient: linear-gradient(225deg, $aa-day-blue 14.72%, $aa-light-blue 85.5%);
+
+// AA Background
+$aa-marble: #efeeef;
+$aa-black-blue: #072238;
+$aa-grey: #757679;
+$aa-white: #fff;
+
+
+// Non PF brand colors (third party colors)
+
+// Western Union Card
+$wu-yellow: #ffdf1b;
+$wu-black: #1e1e1e;

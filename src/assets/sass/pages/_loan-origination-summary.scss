@@ -1,0 +1,11 @@
+.theme-loan-origination {
+  @include media-breakpoint-up(lg) {
+    background-color: $aa-day-blue-light;
+  }
+
+  &-summary-container {
+    @include media-breakpoint-down(lg) {
+      padding: 0 $spacing-m;
+    }
+  }
+}

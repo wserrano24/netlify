@@ -1,0 +1,55 @@
+.theme-radio-card-button {
+  background: $aa-day-blue-light;
+  border: 1px solid $aa-marble;
+  border-radius: $theme-border-radius;
+  cursor: $form-range-track-cursor;
+  margin-bottom: $spacing-s;
+  padding: $spacing-m;
+
+  &:last-of-type {
+    margin-bottom: $spacing-m;
+  }
+
+  &-title {
+    display: block;
+    font-family: $theme-heading-font-family;
+    font-weight: $theme-form-label-font-weight;
+  }
+
+  &-description {
+    color: $aa-grey;
+  }
+
+  &-icon {
+    margin-left: auto;
+  }
+
+  &-submit {
+    margin-bottom: $spacing-l;
+    text-align: center;
+  }
+
+  &.pf-checked {
+    background: $aa-y-gradient;
+  }
+
+  .form-check-input {
+    background: $white;
+    border: 1px solid $white;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: $spacing-s;
+    transform: scale(1.3);
+  }
+
+  .form-check-input:checked {
+    background: $aa-dark-blue;
+  }
+
+  label {
+    cursor: pointer;
+    margin-left: $spacing-s;
+  }
+}
+
+

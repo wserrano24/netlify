@@ -1,0 +1,29 @@
+.theme-transaction-dropdown {
+  color: $aa-black-blue;
+
+  p {
+    font-size: $font-size-md;
+    font-weight: $theme-font-weight-bold;
+  }
+
+  a {
+    font-size: $font-size-sm;
+    font-weight: $theme-font-weight-bold;
+  }
+
+  .dropdown {
+    .btn {
+      align-items: center;
+      background-color: $aa-marble;
+      border: 1px solid $aa-marble;
+      border-radius: $spacing-s;
+      box-shadow: $pf-box-shadow-inset;
+      display: flex;
+      font-family: $theme-font-family-base;
+      font-weight: $theme-font-weight-light;
+      justify-content: space-between;
+      padding: $spacing-m;
+      width: 100%;
+    }
+  }
+}

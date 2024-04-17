@@ -1,0 +1,62 @@
+.theme-layout-application {
+  background-color: $aa-white;
+  min-height: 100vh;
+
+  @include tablet-layout-spacing;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $spacing-3xl;
+    padding-top: $spacing-3xl;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-color: $aa-day-blue-light;
+  }
+
+  main {
+    height: 100%;
+    min-height: calc(50.75rem - 6.25rem);
+    @media (max-width: 375px) {
+      min-height: auto;
+    }
+  }
+
+  &-inner-container {
+    background-color: $white;
+    height: 100vh;
+    padding: $spacing-l;
+
+    @include media-breakpoint-up(lg) {
+      width: 36rem;
+      height: auto;
+      border-radius: $border-radius-lg;
+      padding: $spacing-3xl;
+    }
+  }
+}
+
+/**
+* Secondary layout will remove only padding and other style will inherit
+* from the  from the ".theme-layout-application" inner container for now.
+*/
+
+.theme-layout-application-secondary {
+  @include media-breakpoint-between(md, lg) {
+    padding: 0;
+  }
+
+  .theme-layout-application-inner-container {
+    padding: 0;
+  }
+}
+
+.theme-layout-dashboard-offers {
+  background-color: $aa-day-blue-light;
+}
+.theme-layout-lead-gen{
+  padding-top: 0;
+  padding-bottom: 0;
+  >main {
+    min-height: 100%;
+  }
+}

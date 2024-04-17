@@ -1,0 +1,24 @@
+.theme-loan-info-card {
+  background-color: $aa-day-blue;
+  border: none;
+
+  &.card {
+    .card-body {
+      padding: $spacing-xl $spacing-m;
+
+      h2 {
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-m;
+      }
+
+      p {
+        line-height: $theme-line-height-md;
+        margin-bottom: $spacing-l;
+      }
+
+      a {
+        padding: $spacing-m $spacing-l;
+      }
+    }
+  }
+}

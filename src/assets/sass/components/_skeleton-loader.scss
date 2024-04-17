@@ -1,0 +1,28 @@
+.theme-skeleton-loader {
+  // Avoids loader element collapsing (not taking space)
+  // when used in containers with display flex.
+  min-width: 8rem;
+
+  .placeholder {
+    border-radius: .5rem;
+    position: relative;
+
+    // Simulate gap between loader lost due due to html
+    // being compiled without spaces between elements.
+    &::after,
+    &::before {
+      width: 1px;
+      height: 100%;
+      background-color: $white;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    &::after {
+      left: auto;
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.theme-global-application-footer {
+  .pf-footer-text {
+    color: $aa-black-blue;
+    font-weight: $theme-font-weight-light;
+    margin: 0;
+  }
+
+  .theme-btn-modal-link {
+    font-family: $theme-font-family-base;
+    font-weight: $theme-font-weight-light;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include link-primary;
+  }
+
+  .theme-footer-lock-icon {
+    margin: -0.1rem $spacing-s 0 0;
+  }
+}

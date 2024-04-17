@@ -1,0 +1,16 @@
+.theme-icon {
+  &-sm {
+    width: $theme-icon-sm;
+    height: $theme-icon-sm;
+  }
+
+  &-md {
+    width: $theme-icon-md;
+    height: $theme-icon-md;
+  }
+
+  &-lg {
+    width: $theme-icon-lg;
+    height: $theme-icon-lg;
+  }
+}

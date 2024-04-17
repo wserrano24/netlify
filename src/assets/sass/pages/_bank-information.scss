@@ -1,0 +1,13 @@
+.theme-bank-information {
+  form {
+    flex-grow: 1;
+  }
+
+  footer {
+    padding-bottom: $spacing-xl;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: $spacing-xl;
+    }
+  }
+}

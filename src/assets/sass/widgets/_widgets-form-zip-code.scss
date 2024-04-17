@@ -1,0 +1,9 @@
+.theme-form-zip-code {
+  .btn {
+    width: 80%;
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+}

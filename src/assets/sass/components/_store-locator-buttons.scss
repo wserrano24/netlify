@@ -1,0 +1,24 @@
+.theme-store-locator-buttons {
+  margin-bottom: $spacing-l;
+  padding-top: $spacing-m;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 0;
+  }
+
+  &-location {
+    // Value to offset button padding
+    margin-left: -0.75rem;
+  }
+
+  &-hide {
+    display: none;
+
+    // Value to offset button padding
+    margin-right: -0.75rem;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+}

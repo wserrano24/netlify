@@ -1,0 +1,49 @@
+.theme-notification-slider {
+  $arrow-position: 46%;
+
+  border-radius: 0.5rem;
+
+  &-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $spacing-m;
+
+    &-title,
+    &-link {
+      font-weight: $theme-font-weight-bold;
+    }
+
+    &-title {
+      font-family: $theme-font-family-secondary;
+      font-size: $font-size-md;
+      line-height: $theme-line-height-md;
+      margin-bottom: 0;
+    }
+
+    &-link {
+      @include link-primary;
+    }
+  }
+
+  /* stylelint-disable -- disabling checks because we are accommodating modifications on splide classes*/
+  .splide__pagination {
+    top: 5rem;
+  }
+  @include media-breakpoint-up(md) {
+    .splide__pagination {
+      top: 7.2rem;
+    }
+    //Note: 50% is the default value for the arrows' position, overriding here since added padding to container so it's increasing overall height.
+    .splide__arrow {
+      top: $arrow-position;
+      transform: translateY(-$arrow-position);
+    }
+    .splide__arrow--prev {
+      left: $spacing-m;
+    }
+    .splide__arrow--next {
+      right: $spacing-m;
+    }
+  }
+}

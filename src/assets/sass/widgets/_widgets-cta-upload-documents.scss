@@ -1,0 +1,6 @@
+.theme-cta-upload-documents {
+  flex-direction: column;
+  flex-grow: 1;
+
+  @include cta-card;
+}

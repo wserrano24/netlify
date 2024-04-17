@@ -1,0 +1,33 @@
+.theme-file-upload-progress-bar {
+  width: 100%;
+  height: 5.5rem;
+  background-color: $aa-day-blue-lighter;
+  border-radius: $theme-border-radius;
+  padding: $spacing-m $spacing-m $spacing-l $spacing-m;
+
+  &-header {
+    align-items: center;
+    display: flex;
+    height: 1.5625rem;
+    justify-content: space-between;
+    margin-bottom: $spacing-m;
+  }
+
+  &-percentage {
+    font-size: $font-size-sm;
+    font-weight: $theme-font-weight-bold;
+
+    span {
+      font-size: $font-size-xs;
+      font-weight: $theme-font-weight-light;
+    }
+  }
+
+  &-cancel {
+    padding: 0;
+  }
+
+  .progress-bar-container {
+    width: 100%;
+  }
+}

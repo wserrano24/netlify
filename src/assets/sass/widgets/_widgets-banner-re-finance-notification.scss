@@ -1,0 +1,20 @@
+.theme-product-details {
+  // Need this specificity to overwrite the parent container style
+  .theme-product-details-alert-banner {
+    >div {
+      padding: 0;
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      padding: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacing-3xl;
+    }
+
+    .theme-banner-dark {
+      background-color: $aa-day-blue-light;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+// local mixin. Specific to this file
+@mixin loan-card-spacing-and-background {
+  background-color: $white;
+  padding: $spacing-l;
+
+  @include media-breakpoint-down(md) {
+    padding: $spacing-l $spacing-m;
+  }
+}
+
+.theme-loan-card {
+  $loan-card-gap: 0.6rem;
+  overflow: hidden;
+  box-shadow: $pf-box-shadow-dark;
+  color: $aa-black-blue;
+
+  &.theme-loan-card-naked {
+    .card-body {
+      border-radius: 0 0 7px 7px;
+    }
+  }
+
+  &.card {
+    .card-header {
+      @include loan-card-spacing-and-background;
+
+      border-bottom: 1px solid $aa-marble;
+    }
+
+    .card-body {
+      @include loan-card-spacing-and-background;
+
+      border-bottom: none;
+    }
+
+    .card-footer {
+      background-color: $white;
+      border-top: none;
+      padding: 0;
+    }
+  }
+
+  &-details-header {
+    .theme-key-value-text-label {
+      font-weight: $theme-font-weight-bold;
+      margin: 0;
+    }
+    .theme-key-value-text-column {
+      align-items: flex-start;
+    }
+
+  }
+
+  &-details-content {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+
+      >* {
+        padding: 0;
+        width: 33%;
+      }
+    }
+
+    .theme-key-value-text-column {
+      align-items: flex-start;
+      font-weight: $theme-font-weight-light;
+    }
+
+    .theme-key-value-text-label {
+      margin: 0;
+      font-size: $font-size-xs;
+      padding-bottom: $spacing-xs;
+    }
+
+    .theme-key-value-text-value {
+      font-size: $font-size-md;
+    }
+  }
+
+  &-header {
+    &-logo {
+      width: 1.5rem;
+      height: 1.5rem;
+      align-items: center;
+      background: $aa-y-gradient;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+
+      &-icon {
+        width: 1.25rem;
+        height: 1rem;
+      }
+    }
+
+    &-amount {
+      align-items: center;
+      column-gap: $loan-card-gap;
+      font-family: $theme-font-family-secondary;
+      font-weight: $theme-font-weight-bold;
+      justify-content: flex-end;
+
+      p {
+        font-size: $font-size-md;
+        margin-bottom: 0;
+      }
+    }
+
+    &-title {
+      margin-left: $spacing-s;
+      padding: 0;
+
+      p {
+        &:first-of-type {
+          font-family: $theme-font-family-secondary;
+          font-size: $font-size-md;
+          font-weight: $theme-font-weight-bold;
+          margin: $spacing-xs 0;
+        }
+
+        &:last-of-type {
+          font-family: $theme-font-family-base;
+          font-size: $font-size-xs;
+          line-height: 1;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: space-evenly;
+    padding: $spacing-m;
+  }
+
+  &-footer-border {
+    border-top: 1px solid $aa-marble;
+  }
+}

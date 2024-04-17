@@ -1,0 +1,247 @@
+.theme-landing-page {
+  background: $aa-y-gradient;
+  max-height: 100vh;
+  overflow-y: hidden;
+
+  .theme-landing-container {
+    background-image: url('@/assets/images/logo-mark-light.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 160%;
+
+    @include media-breakpoint-up(lg) {
+      background-position: bottom 10% right -40%;
+      background-size: auto;
+    }
+  }
+
+  &-button-group {
+    column-gap: $spacing-s;
+    display: flex;
+    flex-flow: wrap;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: center;
+      margin-bottom: $spacing-3xl;
+    }
+
+    a.btn-outline-primary {
+      background-color: $white;
+      display: inline-flex;
+    }
+
+    a.btn-primary {
+      @include media-breakpoint-up(lg) {
+        display: inline-flex;
+      }
+
+      @include media-breakpoint-down(lg) {
+        background: $white;
+        border: 2px solid $aa-dark-blue;
+        box-shadow: $pf-box-shadow;
+        color: $aa-dark-blue;
+
+        &:hover {
+          background: $aa-day-blue;
+          box-shadow: $pf-box-shadow-inset;
+        }
+
+        &.disabled {
+          border-color: $aa-grey;
+          color: $aa-grey;
+
+          path {
+            stroke: $aa-grey;
+          }
+        }
+
+        &:active,
+        &:focus {
+          background-color: $aa-white;
+        }
+      }
+    }
+
+    .btn {
+      align-items: center;
+      display: inline-flex;
+      font-weight: $theme-btn-font-weight;
+      justify-content: center;
+    }
+  }
+
+  .theme-logo-mobile {
+    max-height: 3vh;
+    max-width: 44vw;
+    min-height: 26.8px;
+    min-width: 217.6px;
+  }
+
+  .row {
+    margin-top: 0;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .card {
+    background-color: transparent;
+    border: 0;
+    border-radius: $border-radius-lg;
+    max-width: none;
+
+    @include media-breakpoint-up(lg) {
+      background-color: $white;
+      color: $theme-body-color;
+      text-align: center;
+      width: 576px;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+    padding: $spacing-5xl $spacing-xl 0 0;
+
+    @media (min-width: 360px) {
+            padding: $spacing-6xl $spacing-xl 0 0;
+    }
+    @media (min-width: 380px) {
+            padding: $spacing-18xl $spacing-xl 0 0;
+    }
+    @include media-breakpoint-up(lg) {
+      display: block;
+      min-height: auto;
+      padding: $spacing-l $spacing-5xl;
+    }
+  }
+
+  .card-title {
+    font-size: $font-size-xxl;
+    letter-spacing: -0.02em;
+    margin-bottom: $spacing-m;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacing-l;
+    }
+  }
+
+  .card-text {
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xl;
+
+    @include media-breakpoint-up(lg) {
+      font-family: $theme-font-family-secondary;
+      font-size: $font-size-mdl;
+      font-weight: $theme-font-weight-bold;
+      margin-bottom: $spacing-4xl;
+    }
+  }
+
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+    border: 0;
+  }
+
+  .card-header {
+    padding: $spacing-xl 0 0 0;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      padding: $spacing-3xl $spacing-m;
+    }
+  }
+
+  .card-footer {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+      padding: 0 $spacing-3xl $spacing-3xl;
+    }
+  }
+
+  @media all and (display-mode: standalone) {
+    .theme-notification {
+      display: none;
+    }
+  }
+
+  .theme-notification {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+
+    @include media-breakpoint-up(md) {
+      bottom: 8px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    .card {
+      background-color: $aa-white;
+      border-radius: $theme-border-radius;
+
+      .card-body {
+        .theme-notification-content {
+          &-wrapper {
+            &-heading {
+              color: $aa-black-blue;
+              margin-top: $spacing-xs;
+              white-space: break-spaces;
+            }
+          }
+
+          button {
+            min-width: 16px;
+            min-height: 16px;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-content {
+    .modal-body {
+      .theme-modal-add-to-home-screen-content {
+        text-align: left;
+
+        .theme-application-description {
+          h3 {
+            font-family: $theme-font-family-base;
+            font-size: $font-size-sm;
+          }
+
+          p {
+            font-size: $font-size-sm;
+          }
+        }
+
+        ol {
+          color: $wu-black;
+          padding-left: $spacing-m;
+
+          li {
+            list-style: decimal;
+            margin-bottom: $spacing-m;
+          }
+        }
+
+        ol li:nth-child(2) span {
+          border: 0.5px solid $aa-day-blue;
+          border-radius: $theme-border-radius;
+          margin-left: $spacing-s;
+          padding: $spacing-s;
+        }
+      }
+    }
+  }
+}

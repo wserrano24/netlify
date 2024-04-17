@@ -1,0 +1,69 @@
+.theme-disclosure {
+  margin-bottom: $spacing-3xl;
+
+  &-no-margin {
+    margin: 0;
+  }
+
+  &-bottom-margin {
+    margin-bottom: $spacing-m;
+  }
+
+  &-bottom-margin-small {
+    margin-bottom: $spacing-xs;
+  }
+
+  &-bottom-margin-large {
+    margin-bottom: $spacing-xl;
+  }
+
+  &-list {
+    margin-bottom: 0;
+    padding-left: 0;
+
+    &-item {
+      margin-bottom: $spacing-m;
+
+      .btn {
+        border: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &-description {
+    font-size: $font-size-md;
+
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-sm;
+    }
+
+    button {
+      padding: 0;
+    }
+  }
+
+  &-title {
+    font-family: $theme-font-family-secondary;
+    font-size: $font-size-mdl;
+    font-weight: $theme-font-weight-bold;
+  }
+
+  &-form-title {
+    font-weight: bold;
+    margin-bottom: $spacing-m;
+  }
+
+  &-link {
+    cursor: pointer;
+    font-weight: $theme-font-weight-bold;
+    text-decoration: underline;
+  }
+
+  &-small-text {
+    font-size: $font-size-xs;
+  }
+
+  // Overrides for base accordion style
+  @include accordion-disclosure;
+}

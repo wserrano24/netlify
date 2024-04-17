@@ -1,0 +1,16 @@
+.theme-re-apply-loan-origination-disbursement-methods-section {
+  &-debit-card {
+    p {
+      // Using nearest value
+      margin-bottom: $spacing-xs;
+    }
+
+    a {
+      @include link-primary-bold;
+
+      color: $aa-white;
+      font-family: $theme-font-family-base;
+      font-size: $font-size-sm;
+    }
+  }
+}

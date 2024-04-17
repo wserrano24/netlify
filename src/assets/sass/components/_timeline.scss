@@ -1,0 +1,125 @@
+.theme-timeline {
+  $block: &;
+  $timeline-in-progress-length: 45%;
+  $timeline-indicator-length: 1.5rem;
+  $progress-bar-height: calc(100% - #{$timeline-indicator-length});
+
+  counter-reset: step-number;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+
+  .hide-timeline-progress-bar {
+    padding-left: 0;
+    #{$block}-progress-bar::after,
+    #{$block}-item.is-done #{$block}-progress-bar #{$block}-active-progress-bar {
+      display: none;
+    }
+  }
+
+  .title {
+    font-family: $theme-font-family-secondary;
+    font-size: $font-size-md;
+    font-weight: $theme-font-weight-bold;
+    letter-spacing: -0.02em;
+    margin-bottom: $spacing-m;
+  }
+
+  &-item {
+    counter-increment: step-number;
+    display: flex;
+  }
+
+  &-progress-bar {
+    position: relative;
+  }
+
+  &-progress-bar::before {
+    width: $timeline-indicator-length;
+    height: $timeline-indicator-length;
+    border: 2px solid $aa-dark-blue;
+    background:$aa-dark-blue;
+    border-radius: 50%;
+    color: #fff;
+    content: counter(step-number);
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: $theme-font-weight-bold;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &-progress-bar::after,
+  &-active-progress-bar {
+    content: '';
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  &-progress-bar::after {
+    border: 2px solid $aa-marble;
+    height: $progress-bar-height;
+  }
+
+  &-active-progress-bar {
+    border: 2px solid $aa-dark-blue;
+    display: none;
+    z-index: 1;
+  }
+
+  .entry {
+    list-style: none;
+    margin-left: $spacing-s;
+    padding-bottom: $spacing-m;
+
+    &-title {
+      font-size: $font-size-md;
+      font-weight: $theme-font-weight-bold;
+      line-height: $theme-line-height-md;
+      margin-bottom: $x-small;
+    }
+
+    &-text {
+      color: $aa-grey;
+    }
+  }
+
+  &-item.is-done &-progress-bar::before {
+    background-color: $aa-dark-blue;
+    content: url('@/assets/images/icons/icon-check.svg');
+    line-height: 1.35rem;
+  }
+
+  &-item.is-done &-active-progress-bar {
+    display: inline-block;
+    height: $progress-bar-height;
+  }
+
+  &-item.is-done.start-next-step &-active-progress-bar {
+    display: inline-block;
+    height: $timeline-in-progress-length;
+  }
+
+  .is-done &-entry-text {
+    color: $aa-black-blue;
+  }
+
+  &-item:last-child &-progress-bar::after,
+  &-item.is-done:last-child &-active-progress-bar {
+    display: none;
+  }
+
+  // Styles for a loading
+  &-loading {
+    width: 100%;
+
+    .entry {
+      width: 100%;
+    }
+
+    .theme-skeleton-loader {
+      min-width: 2rem;
+    }
+  }
+}

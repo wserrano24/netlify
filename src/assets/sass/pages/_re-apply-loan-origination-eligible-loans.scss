@@ -1,0 +1,35 @@
+.theme-multi-offer-header {
+  @include media-breakpoint-down(lg) {
+    // This is to overwrite the border radius coming from base card component for mobile resolution
+    .card {
+      border-radius: 0;
+    }
+    @media only screen and (min-width: 640px) {
+      .card {
+        border-radius: 16px;
+      }
+    }
+    @media only screen and (min-width: 540px) {
+      .card h1 {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.theme-multi-offer-card {
+  .theme-disclosure-link {
+    padding: 0;
+  }
+}
+
+.theme-global-application-header {
+  .theme-navbar-brand {
+    display: none;
+    margin-right: 0;
+
+    @include media-breakpoint-up(lg) {
+      display: inline;
+    }
+  }
+}

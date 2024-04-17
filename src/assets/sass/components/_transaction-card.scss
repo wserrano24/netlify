@@ -1,0 +1,78 @@
+.theme-transaction-card {
+  &-header {
+    align-items: center;
+    justify-content: center;
+    padding-right: $spacing-m;
+    width: auto;
+  }
+
+  p {
+    color: $aa-black-blue;
+    margin: $spacing-xs;
+  }
+
+  &-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    border-radius: $spacing-xs;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-description,
+  &-amount {
+    font-size: $font-size-md;
+    font-weight: $theme-font-weight-bold;
+  }
+
+  &-content {
+    font-size: $font-size-xs;
+  }
+
+  &-amount {
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: $spacing-xs;
+
+    p {
+      margin: 0 $spacing-xs 0 0;
+    }
+  }
+
+  &-route {
+    p {
+      @include media-breakpoint-up(md) {
+        padding-right: $spacing-l;
+      }
+    }
+  }
+
+  &-paid {
+    background-color: $aa-green-light;
+  }
+
+  &-default,
+  &-origination {
+    background-color: $aa-yellow;
+  }
+
+  &-late-fee {
+    // the color used here is the nearest available value; as per figma it is #FFB8B8;
+    background-color: $aa-red-light;
+  }
+
+  &-deferred,
+  &-postponed {
+    background-color: $aa-goldenrod;
+  }
+
+  &-upcoming-deferral {
+    // the color used here is the nearest available value; as per figma it is #FFC42966;
+    background-color: $aa-goldenrod-light;
+  }
+
+  &-upcoming-payment {
+    background-color: $aa-green-lighter;
+  }
+}

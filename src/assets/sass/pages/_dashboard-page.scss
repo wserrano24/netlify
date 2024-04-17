@@ -1,0 +1,31 @@
+.theme-dashboard {
+  @include tablet-layout-spacing;
+
+  background-color: $aa-day-blue-light;
+  min-height: 100vh;
+
+  &-card-section {
+    margin-bottom: $spacing-l;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: $spacing-xl;
+    }
+  }
+
+  // TODO: style for footer section is temporary added, it will be replaced later once global footer will be replaced.
+  footer {
+    padding-bottom: $spacing-l;
+    padding-top: $spacing-xs;
+
+    ul {
+      li {
+        margin-right: $spacing-m;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: $spacing-xl;
+      padding-top: $spacing-xl;
+    }
+  }
+}

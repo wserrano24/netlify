@@ -1,0 +1,76 @@
+.theme-account-details-update-email {
+  height: 100%;
+  min-height: inherit;
+  position: relative;
+
+  &-heading {
+    margin-bottom: $spacing-xxl;
+
+    @include media-breakpoint-down(lg) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &-form {
+    input {
+      &:focus,
+      &:active {
+        border: 2px solid $aa-goldenrod;
+        box-shadow: $pf-box-shadow-inset-light;
+        margin-bottom: $spacing-s;
+      }
+    }
+  }
+
+  form {
+    .invalid-feedback {
+      font-size: $font-size-sm;
+    }
+
+    .not-valid {
+      border: 2px solid $aa-red;
+      box-shadow: $pf-box-shadow-inset-light;
+    }
+  }
+
+
+  &-cta-block {
+    margin: 0 auto $spacing-l auto;
+    max-width: 100%;
+    width: 100%;
+    width: 19rem;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+    }
+
+  }
+
+  &-submit {
+    bottom: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+
+    footer {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: $spacing-xl;
+        margin-top: 0;
+      }
+
+      .nav {
+        display: none;
+      }
+    }
+  }
+
+  &-warning-label {
+    color: $aa-black-blue;
+    font-size: $font-size-xs;
+    padding-left: $spacing-s;
+  }
+}

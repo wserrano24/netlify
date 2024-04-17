@@ -1,0 +1,47 @@
+.theme-digital-wallet-edit-payment-method {
+  .thee-global-application-header {
+    margin-bottom: $spacing-4xl;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: $spacing-xxl;
+    }
+  }
+
+
+  &-form {
+    .theme-input-wrapper {
+      margin-bottom: $spacing-xxl;
+    }
+  }
+
+  &-cta-block {
+    margin: 0 auto $spacing-l auto;
+    margin-bottom: $spacing-l;
+    max-width: 100%;
+    width: 19rem;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 auto $spacing-xl auto;
+      padding: 0;
+    }
+
+  }
+
+  // TODO: Remove this temporary style once the global footer is integrated
+  footer {
+    @include media-breakpoint-down(lg) {
+      justify-content: center;
+      margin-bottom: $spacing-l;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &-nav-link {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}

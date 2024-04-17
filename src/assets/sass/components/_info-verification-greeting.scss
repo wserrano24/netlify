@@ -1,0 +1,12 @@
+.theme-info-verification-greeting {
+  p {
+    font-family: $theme-font-family-secondary;
+    font-size: $font-size-lg;
+    font-weight: $theme-font-weight-bold;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl;
+    }
+  }
+}

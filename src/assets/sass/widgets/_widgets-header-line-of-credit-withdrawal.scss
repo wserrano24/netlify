@@ -1,0 +1,9 @@
+.theme-header-line-of-credit-withdrawal {
+  .theme-line-of-credit-withdrawal-link {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: inline;
+    }
+  }
+}

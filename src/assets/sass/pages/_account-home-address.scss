@@ -1,0 +1,16 @@
+.theme-update-account-address {
+  display: flex;
+  flex-direction: column;
+
+  form {
+    flex-grow: 1;
+  }
+
+  &-cta {
+    button {
+      margin-bottom: $spacing-l;
+      max-width: 100%;
+      width: 19rem;
+    }
+  }
+}

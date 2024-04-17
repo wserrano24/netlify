@@ -1,0 +1,350 @@
+.theme-multi-offer {
+  background-color: $aa-day-blue-light;
+
+  .theme-btn-desktop,
+  .theme-btn-mobile {
+    margin-bottom: $spacing-m;
+  }
+
+  .theme-btn-desktop {
+    display: none;
+  }
+
+  .theme-draw-amount-link {
+    cursor: pointer;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .theme-btn-mobile {
+      display: none;
+    }
+
+    .theme-btn-desktop {
+      display: inline-block;
+    }
+  }
+
+  &-card {
+    margin-bottom: $spacing-xl;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: $spacing-l;
+    }
+
+    .card-header {
+      background-color: $aa-day-blue;
+
+      p {
+        display: inline-flex;
+        font-family: $theme-heading-font-family;
+        font-weight: $theme-font-weight-bold;
+        margin: 0 $spacing-xs 0 0;
+
+      }
+    }
+
+    .card-body {
+      padding: $spacing-m $spacing-m 0 $spacing-m;
+
+      @include media-breakpoint-up(lg) {
+        padding: $spacing-xl $spacing-xl 0 $spacing-xl;
+      }
+    }
+
+    .card-title {
+      margin-bottom: $spacing-m;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacing-xl;
+      }
+
+      .col {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .theme-btn-desktop {
+        margin: 0;
+      }
+    }
+
+    // TODO: Another solution
+    .card-footer {
+      display: none;
+    }
+
+
+
+    h2 {
+      font-size: $font-size-lg;
+      margin: 0;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-xl;
+      }
+    }
+  }
+
+  .theme-key-value-text-label {
+    font-size: $font-size-md;
+  }
+
+  // This is for custom label with icon.
+  .custom-theme-key-value-text {
+    .theme-key-value-text-label {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  &-header {
+    margin-bottom: $spacing-l;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0;
+    }
+
+    .card {
+      background-color: $aa-dark-blue;
+      border-radius: $theme-border-radius-lg;
+      color: $white;
+      padding: 0;
+
+      .card-body {
+        padding: $spacing-xl $spacing-l;
+      }
+
+      h1 {
+        display: inline-block;
+        font-size: $font-size-lg;
+        line-height: $theme-line-height-md;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+          font-size: $font-size-xl;
+          text-align: left;
+        }
+      }
+
+      span {
+        color: $aa-day-blue;
+      }
+    }
+  }
+
+  &-details {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accordion {
+    width: 100%;
+
+    &-item {
+      border: none;
+    }
+
+    &-button {
+      background-color: $white;
+      border: none;
+      display: flex;
+      font-size: $font-size-sm;
+      font-weight: $theme-font-weight-bold;
+      justify-content: center;
+      padding: 0 0 $spacing-xl 0;
+
+      &::after {
+        margin: 0.25rem 0 0 $spacing-s;
+        scale: 1.25;
+        transform-origin: 50% 30%;
+      }
+    }
+
+    &-body {
+      padding: $spacing-xl 0 $spacing-l 0;
+
+      @include media-breakpoint-up(lg) {
+        padding: $spacing-l 0 $spacing-xl 0;
+
+      }
+
+      h3 {
+        font-size: $spacing-l;
+        margin-bottom: $spacing-l;
+      }
+
+      p:first-of-type {
+        color: $aa-dark-blue;
+        font-family: $theme-font-family-secondary;
+        font-size: $font-size-sm;
+        font-weight: $theme-font-weight-bold;
+
+        // TODO: Revisit and finalize implementation
+        letter-spacing: 0.5px;
+        margin-bottom: $spacing-m;
+
+        @include media-breakpoint-up(lg) {
+          font-size: $font-size-mdl;
+        }
+      }
+
+      .theme-key-value-text {
+        margin-bottom: $spacing-m;
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: $spacing-xxl;
+        }
+      }
+
+      span.theme-key-value-text-label,
+      span.theme-key-value-text-value {
+        text-align: left;
+      }
+
+      .theme-key-value-text-label {
+        font-family: $theme-font-family-base;
+        font-size: $font-size-sm;
+        font-weight: $theme-font-weight-bold;
+
+        // TODO: Revisit and finalize implementation
+        letter-spacing: 0.5px;
+        margin: 0 0 $spacing-xs 0;
+
+        @include media-breakpoint-up(lg) {
+          margin: 0 0 $spacing-m 0;
+        }
+      }
+
+      .theme-key-value-text-value {
+        font-size: $font-size-md;
+        font-weight: $theme-font-weight-light;
+      }
+
+      .theme-input-wrapper {
+        margin-bottom: $spacing-l;
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: $spacing-xxl;
+        }
+      }
+    }
+
+    .theme-total {
+      &.theme-key-value-text {
+        margin: 0;
+      }
+
+      .theme-key-value-text-label {
+        font-family: $theme-font-family-secondary;
+      }
+
+      .theme-key-value-text-value {
+        color: $aa-dark-blue;
+        font-size: $font-size-mdl;
+        font-weight: $theme-font-weight-bold;
+        margin-bottom: $spacing-xl;
+
+        @include media-breakpoint-up(lg) {
+          color: $aa-black-blue;
+          margin-bottom: $spacing-xxl;
+        }
+      }
+    }
+
+    h4 {
+      font-size: $font-size-mdl;
+      font-weight: $theme-font-weight-bold;
+    }
+
+    a {
+      font-weight: $theme-font-weight-bold;
+
+    }
+  }
+
+  &-info {
+    .col-12:last-of-type {
+      margin-bottom: $spacing-xxl;
+    }
+
+    .theme-key-value-text[data-direction=row] .theme-key-value-text-value {
+      font-size: $font-size-mdl;
+    }
+
+    @include media-breakpoint-up(lg) {
+      border: 1px solid $aa-day-blue;
+      border-left: 0;
+      border-right: 0;
+      margin-bottom: $spacing-l;
+
+      .theme-key-value-text {
+        flex-direction: column;
+      }
+
+      .theme-key-value-text[data-direction=row] .theme-key-value-text-label,
+      .theme-key-value-text-value {
+        text-align: center;
+      }
+
+      .theme-key-value-text[data-direction=row] .theme-key-value-text-label {
+        margin-bottom: $spacing-s;
+      }
+
+      .col-12 {
+        border-right: 1px solid $aa-day-blue;
+        padding: $spacing-m 0;
+      }
+
+      .col-12:last-of-type {
+        border-right: none;
+        margin-bottom: 0;
+      }
+
+    }
+  }
+
+  @media (max-width: 300px) {
+    h2 {
+      font-size: $font-size-mdl;
+    }
+
+    .theme-key-value-text {
+      display: block;
+
+      .theme-key-value-text-label {
+        display: block;
+        text-align: left;
+      }
+
+      .theme-key-value-text-value {
+        display: block;
+        margin-bottom: $spacing-l;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.theme-modal-button {
+  margin-left: $spacing-xs;
+  padding: 0;
+}
+
+.theme-btn-modal-link {
+  font-family: $theme-font-family-base;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include link-primary;
+}
+
+.theme-alert-multi-offer-al {
+  margin: $spacing-l $spacing-m;
+  position: absolute;
+  z-index: 1;
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    margin: 0 0 $spacing-xl 0;
+  }
+}

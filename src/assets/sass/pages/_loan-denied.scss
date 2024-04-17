@@ -1,0 +1,48 @@
+.theme-loan-denied {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+
+  @include media-breakpoint-up(lg) {
+    min-height: calc(50.75rem - 6.25rem);
+  }
+
+  p {
+    margin-bottom: $spacing-xl;
+  }
+
+  .card {
+    border: none;
+    box-shadow: $pf-notification-box-shadow;
+
+    img {
+      margin-right: $spacing-m;
+    }
+
+    h2 {
+      font-family: $theme-font-family-base;
+      font-size: $font-size-sm;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      font-size: $font-size-xs;
+      margin: 0;
+    }
+  }
+
+  .card-body {
+    a {
+      text-decoration: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: $spacing-xl $spacing-3xl;
+    }
+  }
+
+  footer {
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,18 @@
+.theme-loan-denied-inner-container {
+  background-color: $aa-day-blue-light;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: $spacing-l;
+
+  @include media-breakpoint-up(md) {
+    width: 36rem;
+    height: auto;
+    background-color: $aa-day-blue;
+    border-radius: $border-radius-lg;
+    padding: $spacing-3xl $spacing-3xl $spacing-xxl $spacing-3xl;
+  }
+  @media (max-width: 375px) {
+    height: 667px;
+  }
+}

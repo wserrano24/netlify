@@ -1,0 +1,25 @@
+// Colors are matched those defined in Figma design kit, see _colors.scss for reference. No colors should be added here that do not exist in the design kit / _colors.scss
+
+export enum Colors {
+  AAYellow = '#ffe700',
+  AALightBlue = '#27aae1',
+  AADisabled = '#d6dada',
+  AADarkBlue = '#0e406a',
+  AAGoldenrod = '#ffc429',
+  AAGoldenrodLight = '#ffedbf',
+  AAGoldenrodLighter = '#fff9ea',
+  AARed = '#d4353f',
+  AARedLight = '#f2c2c5',
+  AARedLighter = '#fbebec',
+  AAGreen = '#058e2c',
+  AAGreenLight = '#b4ddc0',
+  AAGreenLighter = '#e6f4ea',
+  AADayBlue = '#bee6f6',
+  AADayBlueLight = '#ecf8fc',
+  AADayBlueLighter = '#f8fcfe',
+  AAMarble = '#efeeef',
+  AABlackBlue = '#072238',
+  AAGrey = '#757679',
+  Black = '#000',
+  White = '#fff',
+}

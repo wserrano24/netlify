@@ -1,0 +1,61 @@
+.theme-notification {
+  $logo-dimension: 2.5rem;
+
+  cursor: pointer;
+  padding-bottom: $spacing-s;
+
+  .card {
+    border: 0;
+    box-shadow: $pf-notification-box-shadow;
+
+    .card-body {
+      padding: $spacing-m;
+    }
+
+    @include media-breakpoint-up(md) {
+      .card-body {
+        padding: $spacing-xl;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+
+    @include media-breakpoint-up(md) {
+      padding-left: $spacing-l;
+    }
+
+    &-logo {
+      width: $logo-dimension;
+      height: $logo-dimension;
+      margin-right: $spacing-l;
+      margin-left: 4px;
+    }
+
+    &-wrapper {
+      overflow: hidden;
+      width: 100%;
+
+      &-heading,
+      &-description {
+        color: $black;
+
+        @include ellipses;
+      }
+
+      &-heading {
+        max-width: 183px;
+        font-size: $font-size-sm;
+        font-weight: $theme-font-weight-bold;
+        line-height: $theme-line-height-md;
+        margin-bottom: $spacing-xs;
+      }
+
+      &-description {
+        font-size: $font-size-xs;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

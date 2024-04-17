@@ -1,0 +1,58 @@
+.theme-store-locator {
+  min-height: 100vh;
+  padding: 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: $spacing-3xl;
+  }
+
+  &-container {
+    height: calc(100vh - 6.25rem);
+    min-height: 53.125rem;
+  }
+
+  hr {
+    margin-bottom: $large;
+  }
+
+  &-row {
+    height: 100%;
+
+    @include media-breakpoint-down(lg) {
+      height: auto;
+      margin: 0;
+    }
+  }
+
+  &-left {
+    @include tablet-layout-spacing;
+
+    background-color: $white;
+    border-radius: $theme-border-radius $theme-border-radius 0 0;
+    margin-top: -$spacing-s;
+    order: 2;
+    z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+      border-radius: 0;
+      margin-top: 0;
+      order: 1;
+    }
+  }
+
+  &-right {
+    order: 1;
+
+    @include media-breakpoint-up(lg) {
+      order: 2;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: 0;
+    }
+  }
+
+  .theme-input-icon-wrapper {
+    margin-bottom: $spacing-xl;
+  }
+}

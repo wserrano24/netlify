@@ -1,0 +1,164 @@
+@mixin btn-primary {
+  background: $aa-goldenrod;
+  background-image: $aa-y-gradient;
+  border: transparent;
+  box-shadow: $pf-box-shadow;
+  color: $aa-black-blue;
+
+  &:hover {
+    background: $aa-goldenrod;
+    box-shadow: $pf-box-shadow-inset;
+    color: $aa-black-blue;
+  }
+
+  &.disabled {
+    background: $aa-marble;
+    color: $aa-grey;
+  }
+}
+
+@mixin btn-secondary {
+  background: $aa-dark-blue;
+  border: transparent;
+  box-shadow: $pf-box-shadow;
+  color: $white;
+
+  &:hover {
+    background: $aa-black-blue;
+    box-shadow: $pf-box-shadow-inset;
+  }
+}
+
+@mixin link-primary {
+  color: $aa-black-blue;
+  text-decoration: underline;
+
+  &:hover {
+    color: $aa-black-blue;
+    text-decoration: underline;
+  }
+}
+
+// TODO: Find similar styles and replace with this mixin.
+@mixin link-primary-bold {
+  color: $aa-dark-blue;
+  font-family: $theme-font-family-secondary;
+  font-weight: $theme-font-weight-bold;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+}
+
+@mixin ellipses($max-width: 100%) {
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin summary-screen-card-with-background {
+  background-color: $aa-day-blue-lighter;
+  border-radius: $theme-border-radius;
+  padding: $spacing-xxl $spacing-3xl;
+
+  @include media-breakpoint-down(lg) {
+    border-radius: 0;
+    padding: 0 $spacing-m;
+  }
+}
+
+@mixin tablet-layout-spacing {
+  @include media-breakpoint-between(md, lg) {
+    padding-left: $spacing-4xl;
+    padding-right: $spacing-4xl;
+  }
+}
+
+@mixin cta-card {
+  .card {
+    background-color: $aa-day-blue-light;
+    border: none;
+    box-shadow: $pf-box-shadow;
+    margin-bottom: $spacing-m;
+    padding: 0;
+    width: 100%;
+
+    .card-body {
+      padding: $spacing-l $spacing-m;
+    }
+
+    .theme-key-value-text {
+      align-items: center;
+
+      &-label {
+        margin: 0;
+      }
+    }
+
+    p {
+      font-size: $font-size-sm;
+      font-weight: $theme-font-weight-bold;
+      margin: 0;
+    }
+
+    button {
+      padding: 0;
+    }
+  }
+}
+
+@mixin accordion-disclosure {
+  .accordion {
+    padding-bottom: $spacing-xl;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    &-item {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+
+      @include media-breakpoint-down(lg) {
+        border-bottom: 1px solid $aa-marble;
+        padding-bottom: $spacing-l;
+      }
+    }
+
+    &-button {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      display: flex;
+      font-size: $font-size-md;
+      font-weight: $theme-font-weight-bold;
+      padding: 0;
+
+      @include media-breakpoint-down(lg) {
+        font-size: $font-size-sm;
+      }
+    }
+
+    &-body {
+      padding: $spacing-s 0 0 0;
+    }
+  }
+
+  .accordion:last-of-type .accordion-item {
+    @include media-breakpoint-down(lg) {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@mixin link-row {
+  border-bottom: 1px solid $aa-marble;
+  margin-bottom: $spacing-l;
+  padding-bottom: $spacing-l;
+}
+
+@mixin btn-transparent {
+  background-color: transparent;
+  border: none;
+}

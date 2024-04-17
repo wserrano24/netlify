@@ -1,0 +1,73 @@
+.theme-complete-application {
+  .card-body {
+    padding: $spacing-l;
+  }
+
+  &-top {
+    background-image: $aa-y-gradient;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    margin: -$spacing-l;
+    min-height: 12.813rem;
+    overflow: hidden;
+    padding: $spacing-l;
+    position: relative;
+    z-index: 0;
+  }
+
+  &-heading {
+    font-size: $font-size-lg;
+    line-height: $theme-line-height-md;
+  }
+
+  &-icon {
+    width: 100%;
+    height: 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 15.063rem 12.688rem;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &-logo {
+    width: 2.25rem;
+    height: 2.25rem;
+    align-items: center;
+    background-color: $aa-white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-l;
+
+    img {
+      width: 1.25rem;
+    }
+  }
+
+  &-cta {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $spacing-m;
+    position: relative;
+    width: 100%;
+  }
+
+  &-link {
+    width: 2.875rem;
+    height: 2.875rem;
+    align-items: center;
+    background: $aa-dark-blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-bottom-title {
+    font-size: $font-size-sm;
+    line-height: $theme-line-height-md;
+  }
+}

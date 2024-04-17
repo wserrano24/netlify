@@ -1,0 +1,67 @@
+.theme-money-card {
+  min-height: 9.5rem;
+
+  &.card {
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: $spacing-l $spacing-m $spacing-m;
+    }
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      @media (max-width:300px) {
+        width: 100%;;
+      }
+    }
+  }
+
+  &-title,
+  &-description {
+    line-height: $theme-line-height-md;
+  }
+
+  &-title {
+    font-size: $font-size-sm;
+    font-weight: $theme-font-weight-bold;
+  }
+
+  &-description {
+    font-family: $theme-font-family-base;
+    font-size: $font-size-xs;
+    margin-bottom: 0;
+    max-width: 14.625rem;
+  }
+
+  &-link {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  // Different Style based upon card type.
+  &-visa {
+    background-color: $aa-dark-blue;
+
+    .theme-money-card-title,
+    .theme-money-card-description {
+      color: $aa-white;
+    }
+  }
+
+  &-western-union {
+    // TODO: Added non pf brand color for western-union card
+    background-color: $wu-yellow;
+
+    .theme-money-card-title,
+    .theme-money-card-description {
+      // TODO: Added non pf brand color for western-union card
+      color: $wu-black;
+    }
+  }
+}

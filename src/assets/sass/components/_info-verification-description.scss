@@ -1,0 +1,22 @@
+.theme-info-verification-description {
+  h2 {
+    font-family: $theme-font-family-secondary;
+    font-size: $font-size-lg;
+    font-weight: $theme-font-weight-bold;
+    line-height: $theme-line-height-md;
+    margin: $spacing-xxl 0 $spacing-m 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl;
+    }
+
+    span {
+      color: $aa-light-blue;
+    }
+  }
+
+  p {
+    font-size: $font-size-md;
+    font-weight: $theme-font-weight-light;
+  }
+}

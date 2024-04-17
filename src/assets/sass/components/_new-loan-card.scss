@@ -1,0 +1,136 @@
+.theme-new-loan-card {
+  $block: &;
+  $zindex: 1;
+
+  box-shadow: $pf-box-shadow;
+  overflow: hidden;
+
+  &-logo {
+    $logo-dimension: 2.25rem;
+
+    width: $logo-dimension;
+    height: $logo-dimension;
+    align-items: center;
+    background-color: $aa-white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-l;
+
+    img {
+      width: 1.25rem;
+    }
+  }
+
+  &-banner,
+  &-details {
+    padding: $spacing-l;
+  }
+
+  &-banner {
+    background-image: $aa-y-gradient;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    z-index: $zindex;
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-image: url('@/assets/images/logo-mark-light.svg');
+      background-position: calc(100% + 3rem - #{$spacing-l}) calc(100% - #{$spacing-l});
+      background-repeat: no-repeat;
+      background-size: 15.0625rem 12.6875rem;
+      content: '';
+      opacity: 0.5;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  &-details {
+    position: relative;
+
+    &-title,
+    &-text {
+      color: $aa-black-blue;
+      font-size: $font-size-sm;
+      line-height: $theme-line-height-md;
+    }
+
+    &-title {
+      font-weight: $theme-font-weight-bold;
+    }
+
+    &-text {
+      font-weight: $theme-font-weight-light;
+      margin-bottom: 0;
+    }
+
+    a {
+      font-weight: $theme-font-weight-bold;
+      text-decoration: underline;
+    }
+  }
+
+  &-icon-wrapper {
+    $icon-dimension: 2.875rem;
+
+    width: $icon-dimension;
+    height: $icon-dimension;
+    background-color: $aa-dark-blue;
+    border-radius: 50%;
+    line-height: 3;
+    position: absolute;
+    right: $large;
+    text-align: center;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: $zindex + 1;
+  }
+
+  .card-body {
+    display: block;
+    padding: 0;
+  }
+
+  .card-title,
+  h2 {
+    font-size: $font-size-lg;
+    line-height: $theme-line-height-sm;
+    margin-bottom: $spacing-s;
+    margin-right: 0;
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-xl;
+      margin-right: $spacing-xxl;
+    }
+  }
+
+  .card-text,
+  p {
+    margin-bottom: $spacing-3xl;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacing-l;
+    }
+  }
+
+  a {
+    margin: auto;
+    max-width: 100%;
+    width: 12.5rem;
+
+    @include media-breakpoint-up(lg) {
+      width: 19rem;;
+    }
+  }
+
+
+  .theme-with-body &-banner {
+    padding-bottom: $spacing-xxl;
+  }
+}

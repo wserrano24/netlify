@@ -1,0 +1,213 @@
+.theme-re-apply-loan-origination-summary {
+  &-card {
+    background-color: $aa-day-blue-lighter;
+    border: none;
+    border-radius: $theme-border-radius;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: $spacing-xl;
+    }
+
+    .theme-key-value-text-default {
+      .theme-key-value-text-label {
+        font-weight: $theme-font-weight-light;
+        margin-bottom: $spacing-xs;
+      }
+
+      .theme-key-value-text-value {
+        font-family: $theme-font-family-base;
+        font-size: $font-size-sm;
+      }
+    }
+
+    &-header {
+      padding: $spacing-l 0 $spacing-m;
+
+      p {
+        font-size: $font-size-xs;
+        margin-bottom: 0;
+      }
+
+      .theme-key-value-text-default {
+        .theme-key-value-text-label {
+          font-size: $font-size-xs;
+        }
+      }
+
+      .theme-key-value-text-heading {
+        &:not(:last-child) {
+          margin-bottom: $spacing-s;
+        }
+
+        .theme-key-value-text-label {
+          font-family: $theme-font-family-secondary;
+          margin: 0;
+
+          @include media-breakpoint-down(lg) {
+            font-family: $theme-font-family-base;
+          }
+        }
+      }
+    }
+
+    &-loan-details {
+      border-top: 1px solid $aa-day-blue;
+
+      .theme-key-value-text-default {
+        margin-bottom: $spacing-s;
+
+        &:first-of-type {
+          padding-top: $spacing-m;
+        }
+      }
+    }
+
+    &-loan-amount-details {
+      .theme-key-value-text-default:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: $spacing-m;
+      }
+
+    }
+
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: $spacing-m;
+    }
+
+    dt,
+    dd {
+      width: 50%;
+    }
+
+    dt {
+      font-weight: normal;
+    }
+
+    dd {
+      text-align: right;
+    }
+
+    &-loan-charge-details {
+      dt, dd {
+        &:last-of-type {
+          font-size: $font-size-md;
+          font-weight: $theme-font-weight-bold;
+        }
+      }
+    }
+
+    &-footer-container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: $spacing-m 0;
+
+      button {
+        @include btn-transparent;
+
+        font-weight: $theme-font-weight-bold;
+        text-decoration: underline;
+      }
+
+      &-icons-section {
+        display: flex;
+        justify-content: center;
+
+        button {
+          @include btn-transparent;
+
+          display: inline-flex;
+
+          &:first-of-type {
+            @media (max-width:300px) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // Overrides for base card styles
+    .card-header,
+    .card-body {
+      // This is to override the default background coming from the component
+      background: transparent;
+      border: none;
+      padding: 0 $spacing-m;
+
+      @include media-breakpoint-up(lg) {
+        background: $aa-day-blue-lighter;
+      }
+    }
+
+    .card-footer {
+      background: $aa-day-blue;
+      border: none;
+    }
+
+    .card-title,
+    .card-text {
+      display: none;
+    }
+  }
+
+  .theme-re-apply-loan-origination-summary-form-container {
+    .theme-loan-origination-summary-input .form-label {
+      @include media-breakpoint-up(lg) {
+        font-family: $theme-font-family-base;
+        font-size: $font-size-md;
+        margin-bottom: $spacing-xl;
+      }
+    }
+
+    .theme-loan-origination-summary-form {
+      padding: $spacing-xl $spacing-3xl;
+
+      @include media-breakpoint-down(lg) {
+        padding: $spacing-xl 0 $spacing-m;
+      }
+    }
+  }
+
+  .theme-loan-origination-summary-input-agreement {
+    a {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    button {
+      @include btn-transparent;
+
+      font-family: inherit;
+      font-weight: $theme-font-weight-light;
+      min-width: auto;
+      padding-left: 0;
+      padding-right: 0;
+      text-decoration: underline;
+    }
+
+    span {
+      &:first-of-type {
+        &::after {
+          content: ' ';
+        }
+      }
+
+      &:nth-child(3) {
+        &::before,
+        &::after {
+          content: ' ';
+        }
+      }
+
+      &:last-of-type {
+        &::before {
+          content: ' ';
+        }
+      }
+    }
+  }
+}

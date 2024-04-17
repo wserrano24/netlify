@@ -1,0 +1,48 @@
+.theme-loan-application-summary {
+  .theme-personal-summary {
+    margin-bottom: $spacing-xl;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: $spacing-3xl;
+    }
+
+    &-headline {
+      font-size: 1.125rem;
+      margin-bottom: $spacing-m;
+    }
+
+    &-header {
+      border-bottom: 1px solid $aa-marble;
+      margin-bottom: $spacing-m;
+      padding-bottom: $spacing-m;
+    }
+
+    dt {
+      font-weight: normal;
+    }
+
+    dd {
+      font-weight: $theme-font-weight-bold;
+      margin-bottom: $spacing-m;
+    }
+
+    .theme-personal-summary-delete {
+      color: $aa-red;
+      cursor: pointer;
+    }
+
+    .theme-personal-summary-header a {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &-footer {
+      margin-top: auto;
+
+      .progress-bar-container,
+      .theme-block-row {
+        margin-top: $spacing-m;
+      }
+    }
+  }
+}

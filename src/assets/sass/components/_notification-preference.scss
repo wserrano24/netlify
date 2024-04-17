@@ -1,0 +1,39 @@
+.theme-widget-notification-preference-wrapper {
+  >div {
+    color: $aa-black-blue;
+    line-height: $theme-line-height-md;
+    margin-bottom: $spacing-xl;
+    padding: 0;
+
+    p {
+      &:first-of-type {
+        color: $aa-black-blue;
+        font-family: $theme-font-family-secondary;
+        font-size: $font-size-md;
+        font-weight: $theme-font-weight-bold;
+        letter-spacing: -0.02em;
+        line-height: $theme-line-height-md;
+        margin-bottom: $spacing-s;
+      }
+
+      &:last-of-type {
+        color: $aa-black-blue;
+        font-size: $font-size-sm;
+        line-height: $theme-line-height-md;
+        max-width: 16.375rem;
+
+        @include media-breakpoint-up(md) {
+          max-width: 24.625rem;
+        }
+      }
+
+    }
+  }
+
+  input {
+    $input-dimension: 1.375rem;
+
+    width: $input-dimension;
+    height: $input-dimension;
+  }
+}

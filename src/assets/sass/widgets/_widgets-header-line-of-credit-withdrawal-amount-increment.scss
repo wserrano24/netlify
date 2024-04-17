@@ -1,0 +1,28 @@
+.theme-withdrawal-amount-increment {
+  .card-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  &-component {
+    width: 70%;
+
+    // For small devices in 200% zoom mode
+    @media (max-width: 300px) {
+      width: 100%;
+    }
+  }
+
+  .theme-sub-label {
+    color: $aa-grey;
+    font-size: $font-size-xs;
+    font-weight: $theme-font-weight-light;
+    margin-top: $spacing-m;
+  }
+
+  &.card {
+    border: 0;
+  }
+}

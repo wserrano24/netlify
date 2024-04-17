@@ -1,0 +1,55 @@
+.theme-re-apply-survey {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 44.5rem;
+  padding-bottom: $spacing-l;
+
+  &-options {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .pf-radio {
+      label {
+        margin-left: $spacing-xs;
+      }
+    }
+
+    &-button {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: $spacing-l 0;
+    }
+  }
+
+  &-footer {
+    footer {
+      justify-content: center;
+
+      @include media-breakpoint-up(lg) {
+        justify-content: space-between;
+      }
+
+      .nav {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .btn {
+    &-link {
+      color: $aa-dark-blue;
+      font-family: $theme-font-family-secondary;
+      font-size: $font-size-sm;
+      font-weight: $theme-font-weight-bold;
+    }
+  }
+}

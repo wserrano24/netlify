@@ -1,0 +1,44 @@
+.theme-loan-details-card {
+  &-header-items {
+    margin-top: $spacing-xl;
+    padding: 0;
+
+    .theme-key-value-text-label {
+      margin-bottom: $spacing-s;
+    }
+  }
+
+  &-header-title {
+    font-family: $theme-font-family-secondary;
+    font-size: $font-size-lg;
+    font-weight: $theme-font-weight-bold;
+    letter-spacing: -0.02em;
+    line-height: $theme-line-height-md;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl;
+      line-height: $theme-line-height-sm;
+    }
+  }
+
+  &-header-loan-type {
+    font-size: $font-size-xs;
+    line-height: $theme-line-height-md;
+    margin-bottom: 0;
+  }
+
+  &-items {
+    padding: 0;
+
+    .theme-key-value-text-value {
+      font-family: $theme-font-family-base;
+    }
+  }
+
+  &-hr {
+    background-color: $aa-marble;
+    height: 0.125rem;
+    margin: $spacing-l 0;
+  }
+}

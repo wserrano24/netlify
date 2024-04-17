@@ -1,0 +1,61 @@
+.theme-loan-application-summary {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .btn-link {
+    cursor: pointer;
+  }
+
+  .theme-form-footer {
+    margin-top: auto;
+  }
+
+  &-key-value strong {
+    display: block;
+    font-size: $font-size-md;
+  }
+
+  &-key-value:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.theme-loan-application-summary-link {
+  margin-bottom: $spacing-xl;
+
+  a {
+    color: $aa-dark-blue;
+  }
+
+  &.theme-loan-application-summary-bottom-margin {
+    margin-bottom: $spacing-s;
+  }
+}
+
+.theme-add-income-summary {
+  margin-top: $spacing-s;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 0;
+  }
+
+  a,
+  button {
+    @include link-primary;
+
+    font-weight: $theme-font-weight-bold;
+  }
+}
+
+.theme-loan-application-summary-message {
+  margin-bottom: $spacing-xl;
+
+  &.theme-loan-application-summary-center-text {
+    text-align: center;
+  }
+
+  &.theme-loan-application-summary-bottom-margin {
+    margin-bottom: $spacing-s;
+  }
+}

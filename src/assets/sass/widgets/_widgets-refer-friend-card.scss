@@ -1,0 +1,79 @@
+.theme-refer-friend-card {
+  $image-height: 9rem;
+  $image-width-desktop: 15.5rem;
+  $image-width-mobile: 13rem;
+
+  &-background {
+    width: $image-width-mobile;
+    height: $image-height;
+    background-repeat: no-repeat;
+    background-size: $image-width-mobile $image-height;
+    bottom: -(1.5rem);
+    position: absolute;
+    right: -(2rem);
+
+    @include media-breakpoint-up(lg) {
+      bottom: 1rem;
+      width: $image-width-desktop;
+    }
+
+    @include media-breakpoint-up(xl) {
+      background-size: $image-width-desktop $image-height;
+      bottom: 1rem;
+      right: 1.5rem;
+      width: $image-width-desktop;
+    }
+  }
+
+  &.card {
+    background-image: $aa-y-gradient;
+    background-size: 100% 100%;
+    border: unset;
+    box-shadow: $pf-box-shadow;
+    overflow: hidden;
+    position: relative;
+
+    .theme-refer-friend-card-content {
+      margin-bottom: $spacing-xxl;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacing-3xl;
+      }
+    }
+
+    .card-body {
+      padding: $spacing-l;
+    }
+
+    .card-title {
+      font-size: $font-size-lg;
+      letter-spacing: -0.02em;
+      line-height: $theme-line-height-md;
+      max-width: 18.875rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-xl;
+        line-height: $theme-line-height-sm;
+        max-width: 25rem;
+      }
+    }
+
+    .card-text {
+      font-size: $font-size-sm;
+      line-height: $theme-line-height-md;
+      max-width: 18.4375rem;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 25rem;
+      }
+    }
+
+    .btn-container {
+      margin-bottom: $spacing-m;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacing-xxl;
+      }
+    }
+  }
+}

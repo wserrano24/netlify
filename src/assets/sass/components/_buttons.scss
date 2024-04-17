@@ -1,0 +1,99 @@
+.theme-btn {
+  height: 48px;
+  min-width: $pf-btn-min-width-sm;
+
+  &.btn-primary {
+    background: $aa-goldenrod;
+    background-image: $aa-y-gradient;
+    border: transparent;
+    box-shadow: $pf-box-shadow;
+    color: $aa-black-blue;
+
+    &.loan-hist-button {
+      height: 48px;
+      width: 100%;
+    }
+
+    &:hover {
+      background: $aa-goldenrod;
+      box-shadow: $pf-box-shadow-inset;
+      color: $aa-black-blue;
+    }
+    
+  }
+
+  &.btn-secondary {
+    @include btn-secondary;
+
+    path {
+      stroke: $white;
+    }
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
+
+  &.btn-primary.disabled {
+    background: $aa-marble;
+    color: $aa-grey;
+
+    path {
+      stroke: $aa-grey;
+    }
+  }
+
+  &.btn-outline-primary {
+    box-shadow: $pf-box-shadow;
+    color: $aa-dark-blue;
+
+    &:hover {
+      background: $aa-day-blue;
+      box-shadow: $pf-box-shadow-inset;
+      color: $aa-dark-blue;
+    }
+
+    &.disabled {
+      border-color: $aa-grey;
+      color: $aa-grey;
+
+      path {
+        stroke: $aa-grey;
+      }
+    }
+
+    &:active,
+    &:focus {
+      background-color: $aa-white;
+      color: $aa-dark-blue;
+    }
+  }
+
+  &.btn-sm {
+    height: 48px;
+    width: 128px;
+  }
+
+  .spinner-border {
+    vertical-align: middle;
+    border-color: $aa-light-blue;
+    border-right-color: transparent;
+    border-width: 4px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-width: $pf-btn-min-width-xs;
+  }
+}
+
+// Slide button
+.nav-pills {
+  background-color: $aa-marble;
+  border-radius: $theme-btn-nav-pills-border-radius;
+  padding: $spacing-xs;
+
+  .nav-link {
+    border-radius: $theme-btn-nav-pills-border-radius;
+    color: $aa-dark-blue;
+  }
+}

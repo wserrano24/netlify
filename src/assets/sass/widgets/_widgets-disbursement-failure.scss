@@ -1,0 +1,7 @@
+.theme-disbursement-failure-wrapper {
+  @include media-breakpoint-up(lg) {
+    a {
+      width: 12.5rem;
+    }
+  }
+}

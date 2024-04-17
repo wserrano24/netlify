@@ -1,0 +1,38 @@
+.theme-application-description {
+  h1, h2 {
+    font-size: $font-size-lg;
+    letter-spacing: -0.0425rem;
+    margin-bottom: $spacing-m;
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  // Modal styling
+  &-transparent {
+    text-align: center;
+
+    p {
+      font-size: $font-size-mdl;
+    }
+  }
+
+  p {
+    font-size: $font-size-md;
+  }
+
+  // Modal styling
+  &-center {
+    >* {
+      @include media-breakpoint-up(lg) {
+        text-align: center;
+      }
+    }
+  }
+
+  // Modal styling
+  &-bold {
+    font-weight: $theme-font-weight-bold;
+  }
+}

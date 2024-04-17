@@ -1,0 +1,16 @@
+.theme-manage-preference {
+  display: flex;
+  flex-direction: column;
+
+  form {
+    flex-grow: 1;
+  }
+
+  &-cta-wrapper {
+    button {
+      margin-bottom: 1.5rem;
+      max-width: 100%;
+      width: 19rem;
+    }
+  }
+}

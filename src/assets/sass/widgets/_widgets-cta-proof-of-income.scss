@@ -1,0 +1,75 @@
+.theme-cta-proof-income {
+  flex-direction: column;
+  flex-grow: 1;
+
+  .col-12 {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include cta-card;
+
+  .theme-input-file {
+    width: 100%;
+
+    .card {
+      margin-bottom: 0;
+    }
+  }
+
+  .placeholder {
+    margin: $spacing-m 0;
+  }
+
+  &-uploaded {
+    &-title {
+      font-size: $font-size-mdl;
+      font-weight: $theme-font-weight-bold;
+      margin-bottom: $spacing-xl;
+    }
+
+    &-documents {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-document {
+      @include ellipses;
+
+      border-top: 1px solid $aa-marble;
+      color: $aa-black-blue;
+      font-size: $font-size-sm;
+      font-weight: $theme-font-weight-light;
+      padding: $spacing-xl 0;
+
+      &:last-child {
+        border-bottom: 1px solid $aa-marble;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+      }
+    }
+
+    .btn-link {
+      color: $aa-dark-blue;
+      font-weight: $theme-font-weight-bold;
+      margin-top: $spacing-xl;
+      padding: 0;
+    }
+  }
+
+  &-done {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: $spacing-l 0;
+
+    span {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+    }
+  }
+}

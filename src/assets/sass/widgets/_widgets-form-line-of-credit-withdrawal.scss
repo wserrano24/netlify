@@ -1,0 +1,13 @@
+.theme-form-withdrawal {
+  .theme-form-footer {
+    padding-top: $spacing-xxl;
+  }
+
+  // For small devices in 200% zoom mode
+  @media (max-width: 300px) {
+    select {
+      white-space: pre-wrap;
+    }
+  }
+
+}

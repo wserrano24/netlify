@@ -1,0 +1,64 @@
+.theme-re-finance-loan-origination-summary {
+  .theme-loan-origination-summary-data {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: $spacing-xl;
+    }
+  }
+
+  &-payment-due-section {
+    @include summary-screen-card-with-background;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacing-xl;
+    }
+
+    @include media-breakpoint-down(lg) {
+      background-color: $aa-white;
+      margin-bottom: $spacing-xxl;
+      padding: 0;
+    }
+
+    &-title {
+      font-size: $font-size-mdl;
+      font-weight: $theme-font-weight-bold;
+      margin-bottom: $spacing-s;
+    }
+
+    &-description {
+      border-bottom: 1px solid $aa-marble;
+      font-size: $font-size-md;
+      margin-bottom: $spacing-l;
+      padding-bottom: $spacing-m;
+    }
+
+    &-payment-details {
+      // override the default properties coming from BaseCard Component
+      .theme-key-value-text:nth-last-of-type(2n) {
+        margin-bottom: $spacing-xl;
+
+        .theme-key-value-text-label {
+          margin-bottom: 0;
+        }
+
+      }
+
+      .theme-input-wrapper {
+        margin-bottom: 0;
+
+        .form-label {
+          margin-bottom: $spacing-xs;
+        }
+      }
+    }
+
+    // override the default properties coming from BaseCard Component
+    .card {
+      background: transparent;
+      border: none;
+    }
+
+    .card-body {
+      padding: 0;
+    }
+  }
+}

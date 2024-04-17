@@ -1,0 +1,17 @@
+.theme-driver-license {
+  min-height: 100%;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 44.5rem;
+  }
+
+  &-form-submit-button {
+    margin: 0 auto $spacing-l auto;
+    max-width: 100%;
+    width: 19rem;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+    }
+  }
+}

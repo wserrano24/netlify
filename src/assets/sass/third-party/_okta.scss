@@ -1,0 +1,589 @@
+@use 'sass:color';
+
+.theme-okta {
+  margin: 0;
+
+  @include tablet-layout-spacing;
+
+  @include media-breakpoint-up(lg) {
+    background-color: $aa-day-blue-light;
+    min-height: 100vh;
+    padding: $spacing-3xl 0;
+  }
+
+  @include media-breakpoint-up(xs) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .auth-container,
+  .theme-global-application-footer {
+    margin: 0 auto;
+    padding: 24px;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 23.125rem;
+    }
+  }
+
+  #okta-sign-in {
+    margin-top: 0;
+
+    // Login and Sign up
+    .auth-header.okta-sign-in-header {
+      padding: 0;
+    }
+
+    &.auth-container {
+      // Overwrite styles applied inline by JS script
+      display: block !important;
+
+      .auth-content {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      &.main-container {
+        font-family: $theme-font-family-secondary;
+        overflow: visible;
+      }
+
+      &.main-container,
+      .okta-sign-in-header {
+        border: none;
+        box-shadow: none;
+      }
+
+      .okta-form-subtitle {
+        color: $aa-black-blue;
+        margin-bottom: $spacing-xl;
+      }
+
+      .okta-form-input-field input {
+        font-family: $theme-font-family-secondary;
+      }
+
+      .o-form-head {
+        color: $aa-black-blue;
+        font-size: $font-size-lg;
+        font-weight: $theme-form-label-font-weight;
+        margin-bottom: $spacing-xl;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+          font-size: $font-size-xl;
+        }
+        @media (max-width: 992px) {
+          text-align: left;
+        }
+      }
+
+      .link:link {
+        @include link-primary;
+
+        font-family: $theme-font-family-base;
+        font-size: $font-size-sm;
+        font-weight: $theme-form-label-font-weight;
+      }
+    }
+
+    // Forms and fields
+    .o-form {
+      .o-form-fieldset {
+        width: 100%;
+      }
+
+      &.enroll-sms {
+        .o-form-content {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .o-form-label-top {
+          width: 100%;
+        }
+      }
+
+      .o-form-label legend {
+        color: $aa-black-blue;
+      }
+
+      label {
+        color: $aa-black-blue;
+        font-size: $font-size-sm;
+        margin-bottom: $spacing-xs;
+      }
+
+      .o-form-control {
+        min-height: $spacing-3xl;
+      }
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      .o-form-input-name-phoneNumber.okta-form-input-field {
+        align-items: center;
+        display: flex;
+      }
+
+      .chzn-container-single .chzn-single {
+        height: 2.625rem;
+
+        div b {
+          background-size: 3.25rem 2.313rem !important;
+        }
+      }
+
+      .o-form-fieldset.o-form-label-top {
+        margin-bottom: $spacing-m;
+        text-align: left;
+
+        &.enroll-sms {
+          width: 100%;
+        }
+      }
+
+      .o-form-button-bar {
+        padding: 0 0 $spacing-m;
+        text-align: center;
+      }
+
+      .custom-checkbox {
+        align-items: center;
+        display: flex;
+        margin-bottom: 7.5rem;
+
+        @include media-breakpoint-up(lg) {
+          margin-bottom: $spacing-3xl;
+        }
+
+        label {
+          background-image: none;
+          font-size: $font-size-sm;
+          font-weight: $theme-font-weight-light;
+          margin-bottom: 0;
+        }
+
+        input {
+          @extend .form-check-input;
+
+          width: $spacing-m;
+          height: $spacing-m;
+          background-color: $aa-marble;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          border: 2px solid $aa-dark-blue;
+          border-radius: $theme-border-radius;
+          margin-bottom: 0;
+          margin-right: $spacing-s;
+          margin-top: 0;
+          opacity: 1;
+          vertical-align: top;
+        }
+      }
+
+      .custom-radio {
+        @extend .form-check, .pf-radio;
+
+        width: 100%;
+        height: auto;
+
+        label {
+          background-image: none;
+          padding: 0 0 0 1.25rem;
+
+          &.checked {
+            background-color: transparent;
+          }
+        }
+
+        input {
+          @extend .form-check-input;
+
+          // Overwrite !important set by Okta to allow custom border
+          border: 1px solid $white  !important;
+          margin-top: -0.313rem;
+          opacity: 1;
+          position: relative;
+
+          &:checked[type=radio] {
+            background-image: none;
+          }
+
+          &:focus {
+            // TODO: address this box shadow, should be using something from design kit, defined in theme file
+            box-shadow: 0 0 0 $spacing-xs color.adjust($aa-light-blue, $alpha: -0.7);
+
+            &+label {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      input:not(.custom-checkbox input, .custom-radio input, .button) {
+        @extend .form-control;
+
+        width: 100%;
+        height: $spacing-3xl;
+        appearance: none;
+        background-clip: padding-box;
+        background-color: $input-bg;
+        border: 1px solid $gray-400;
+        border-radius: $theme-border-radius;
+        box-shadow: $pf-box-shadow-inset;
+        color: $aa-black-blue;
+        display: block;
+        font-family: $theme-font-family-base;
+        font-size: $font-size-sm;
+        font-weight: $theme-font-weight-light;
+        line-height: 1;
+        margin-bottom: $spacing-m;
+        padding: 0 $spacing-l;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .o-form-has-errors {
+        input:not(.custom-checkbox input, .custom-radio input, .button) {
+          border: 2px solid $aa-red;
+        }
+      }
+
+      .okta-form-input-field {
+        border: none;
+      }
+
+      .button {
+        @extend .theme-btn, .btn, .btn-md, .btn-primary !optional;
+        width: 200px;
+        height: 48px;
+        padding: $spacing-m $spacing-xl;
+      }
+      .link-button {
+        background: #0E406A;
+        color: #FFFFFF;
+      }
+
+      .remote-lock-16::before {
+        content: '';
+      }
+    }
+
+    .registration-container {
+      border-top: 1px solid $aa-marble;
+      margin-bottom: $spacing-4xl;
+      margin-top: 0;
+      padding-top: $spacing-l;
+
+      .content-container {
+        border-top: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      .registration-label {
+        font-family: $theme-font-family-base;
+        font-size: $font-size-sm;
+        margin-right: $xx-small;
+      }
+
+      .registration-link {
+        @include link-primary;
+
+        font-family: $theme-font-family-base;
+        font-weight: $theme-form-label-font-weight;
+      }
+    }
+
+    .auth-footer {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: $spacing-l;
+    }
+
+    .help-links {
+      text-align: center;
+    }
+
+    .infobox-error::before,
+    .infobox-warning::before {
+      background-color: transparent;
+    }
+
+    p.o-form-explain.okta-form-input-error {
+      font-size: $font-size-sm;
+      padding: 0.625rem 0 0 $spacing-xl;
+      word-break: break-word;
+    }
+
+    .infobox {
+      border: none;
+      border-radius: $theme-border-radius;
+      font-family: $theme-font-family-base;
+      margin-bottom: $spacing-xl;
+
+      // Overwrite !important set by Okta to allow custom padding
+      padding: $spacing-m $spacing-m $spacing-m $spacing-3xl  !important;
+      text-align: left;
+
+      a {
+        @include link-primary;
+      }
+
+      &.infobox-error {
+        background-color: $aa-red-light;
+      }
+
+      &.infobox-warning {
+        background-color: $aa-goldenrod-light;
+      }
+
+      .error-16,
+      .warning-16 {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        top: 0;
+
+        &::before {
+          width: $spacing-l;
+          height: $spacing-l;
+          background-image: url('@/assets/images/icons/third-party/warning-icon.svg');
+          background-repeat: no-repeat;
+          content: '';
+        }
+      }
+
+      .warning-16::before {
+        background-blend-mode: luminosity;
+        /* stylelint-disable-next-line scss/no-global-function-names */
+        background-color: transparentize($aa-goldenrod-light, .1);
+        background-repeat: no-repeat;
+      }
+
+      p {
+        color: $black;
+        font-size: $font-size-sm;
+      }
+    }
+
+    .scan-instructions-details p {
+      color: $aa-black-blue;
+      text-align: left;
+    }
+
+    .registration .subschema p {
+      padding: $spacing-s $spacing-l $spacing-s $spacing-xl;
+      text-align: left;
+
+      .icon {
+        top: $spacing-xs;
+      }
+    }
+
+    .error-16-red::before,
+    .error-16-small::before {
+      width: $spacing-l;
+      height: $spacing-l;
+      background-image: url('@/assets/images/icons/third-party/alert-circle-icon.svg');
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    // MFA
+    .beacon-container {
+      display: none;
+    }
+
+    .instructions {
+      color: $aa-black-blue;
+      text-align: left;
+
+      a.inline-link {
+        color: $aa-black-blue;
+        font-size: $font-size-sm;
+        font-weight: $theme-form-label-font-weight;
+        text-decoration: underline;
+      }
+    }
+
+    .enroll-factor-row {
+      align-items: center;
+      border-bottom: 1px solid $aa-marble;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: $spacing-xl;
+      text-align: center;
+
+      &:last-of-type {
+        border-bottom: none;
+        margin-bottom: $spacing-l;
+        padding: none;
+      }
+
+      .enroll-factor-icon-container {
+        display: none;
+      }
+
+      .enroll-factor-label {
+        color: $aa-black-blue;
+        font-family: $theme-font-family-base;
+        font-weight: $theme-font-weight-bold;
+        justify-content: center;
+        margin-bottom: $spacing-s;
+      }
+
+      .enroll-factor-description {
+        align-items: center;
+        color: $aa-black-blue;
+        display: flex;
+        flex-direction: column;
+        font-family: $theme-font-family-base;
+        overflow: visible;
+        text-align: center;
+      }
+
+      .enroll-factor-button .button {
+        @include btn-secondary;
+
+        align-items: center;
+        display: flex;
+        height: $spacing-3xl;
+        justify-content: center;
+        margin-top: $spacing-m;
+        padding: .6rem $spacing-xl;
+      }
+    }
+
+    // Password recovery
+    p.mobile-recovery-hint {
+      color: $aa-black-blue;
+      font-size: $font-size-sm;
+      margin: $spacing-l auto;
+    }
+
+    .o-form-input-group .o-form-label-inline:first-child {
+      background: none;
+      border: none;
+    }
+
+    .o-form-fieldset-container {
+      align-items: center;
+      color: $aa-black-blue;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .required-fields-label {
+      text-align: left;
+    }
+
+    .forgot-password-sms-enabled .o-form-fieldset-container {
+      overflow: visible;
+    }
+
+    .js-help {
+      margin-top: -35px;
+    }
+    .focused-input {
+      box-shadow: none;
+    }
+
+    .recovery-challenge {
+      margin-bottom: $spacing-m;
+
+      .sms-request-button {
+        margin-left: 0;
+      }
+
+
+      .o-form-fieldset-container {
+        // reverse used since the original value was row-reverse
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+.theme-okta-inner {
+  @extend .card;
+
+  border: none;
+  min-height: 100vh;
+
+  .theme-okta-row {
+    flex: 1;
+  }
+
+  .theme-okta-col {
+    margin-top: auto;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-radius: $theme-btn-border-radius;
+    max-width: 35.938rem;
+    padding: $spacing-3xl;
+  }
+
+}
+
+.theme-okta-header {
+  padding-top: 1rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+  }
+}
+
+.theme-logo-mobile {
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.theme-logo-desktop {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: inline;
+  }
+}
+
+// Removes the extra eye icon on Edge
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+#okta-sign-in a.button.sms-request-button.link-button.link-button-disabled.btn-disabled.disabled {
+  margin: 0 auto;
+  padding-right: $spacing-xl;
+}
+
+#okta-sign-in a.button.sms-request-button {
+  &:not(.link-button-disabled.btn-disabled.disabled) {
+    background: none;
+    box-shadow: none;
+    margin: 0 0 0 auto;
+    padding-right: 0;
+    text-decoration: underline;
+  }
+}
+
+#okta-sign-in a.button.button-primary.js-enroll-phone.margin-top-30.sms-request-button.link-button {
+  background: $aa-goldenrod;
+  background-image: $aa-y-gradient;
+  border: transparent;
+  box-shadow: $pf-box-shadow;
+  margin: $spacing-m auto;
+  padding-right: $spacing-xl;
+  text-decoration: none;
+}

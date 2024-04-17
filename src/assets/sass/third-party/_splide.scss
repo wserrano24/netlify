@@ -1,0 +1,51 @@
+/* stylelint-disable -- disabling checks because we are accommodating modifications on splide classes*/
+.theme-splide-slider {
+  &.theme-splide-slider-pad-bottom {
+    .splide  {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .splide.is-focus-in {
+
+    .splide__pagination__page:focus,
+    .splide__arrow:focus {
+      outline: 3px solid $aa-marble;
+      outline-offset: 3px;
+    }
+  }
+
+  .splide__pagination li {
+    display: flex;
+  }
+
+  .splide__pagination__page {
+    width: $theme-pagination-dimension;
+    height: $theme-pagination-dimension;
+    margin-right: $spacing-m;
+  }
+
+  .splide__pagination__page.is-active {
+    background-color: $aa-black-blue;
+    border: 0;
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  .splide__slide {
+    margin-right: $spacing-m;
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .splide__arrows {
+      display: block;
+    }
+
+    .splide__arrow {
+      background-color: transparent;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+}

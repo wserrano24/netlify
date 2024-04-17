@@ -1,0 +1,76 @@
+.theme-line-of-credit {
+  .theme-line-of-credit-header {
+    @include media-breakpoint-up(lg) {
+      position: relative;
+
+      h1 {
+        font-size: $font-size-xl;
+        margin: 0 0 $spacing-m;
+      }
+
+      &-description {
+        padding-top: $spacing-l;
+      }
+
+      &-small-logo-mobile {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      .col-3,
+      &-small-logo-desktop {
+        display: none;
+      }
+    }
+  }
+
+  &-summary-container {
+    padding: $spacing-3xl $spacing-3xl 0;
+
+    @include media-breakpoint-down(lg) {
+      padding: $spacing-l $spacing-l 0;
+    }
+  }
+
+  .theme-form-footer {
+    padding: 0 $spacing-3xl $spacing-3xl;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 $spacing-m $spacing-m;
+    }
+  }
+
+  .theme-disclosure {
+    &-description {
+      color: $aa-black-blue;
+      font-size: $font-size-sm;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+      }
+
+      a {
+        color: $aa-dark-blue;
+        cursor: pointer;
+        font-weight: $theme-font-weight-bold;
+      }
+    }
+  }
+
+  .accordion {
+    &-item {
+      min-height: 120px;
+
+      @include media-breakpoint-up(lg) {
+        min-height: 140px;
+      }
+    }
+
+    &-header {
+      color: $aa-black-blue;
+    }
+
+  }
+
+}

@@ -1,0 +1,90 @@
+.theme-global-application-header {
+  display: flex;
+  margin-bottom: $spacing-xxl;
+
+  a {
+    @include link-primary-bold;
+  }
+
+  .logo-desktop-only {
+    display: none;
+  }
+
+  &-back-cta {
+    min-width: auto;
+    padding-left: 0;
+
+    &:hover {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .navbar-brand {
+    display: none;
+    margin-right: 0;
+
+    @include media-breakpoint-up(lg) {
+      display: inline;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: $spacing-3xl;
+
+    .logo-desktop-only {
+      display: inline;
+    }
+  }
+
+  // Different style for loan details header
+  &.theme-loan-details-header {
+    $bg-img-width: 11.6875rem;
+
+    background-color: $aa-goldenrod;
+    background-image: $aa-y-gradient;
+    box-shadow: $pf-box-shadow;
+    margin: 0;
+    overflow: hidden;
+    padding: $spacing-xl $spacing-l;
+    position: relative;
+
+    .col {
+      padding: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      border-radius: 1rem;
+      padding: $spacing-xxl $spacing-3xl;
+    }
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-image: url('@/assets/images/logo-mark-light.svg');
+      background-position: 108% 0, top left;
+      background-repeat: no-repeat;
+      background-size: 10rem 8.375rem, cover;
+      content: '';
+      opacity: 0.5;
+      position: absolute;
+
+      @include media-breakpoint-up(lg) {
+        background-position: 103% 40%, top left;
+        background-size: 16.5rem 14.3125rem, cover;
+      }
+    }
+
+    a {
+      position: relative;
+    }
+
+    &-logo {
+      padding: 0;
+
+      img {
+        width: 13.625rem;
+      }
+    }
+  }
+}

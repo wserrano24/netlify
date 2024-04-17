@@ -1,0 +1,24 @@
+.loan-application-timeline {
+  &-title {
+    font-size: $font-size-lg;
+    letter-spacing: -0.02em;
+    line-height: $theme-line-height-md;
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &-text {
+    font-size: $font-size-md;
+    line-height: $theme-line-height-md;
+    margin-top: $spacing-m;
+  }
+
+  &-heading {
+    font-size: 1.125rem;
+    line-height: $theme-line-height-md;
+    margin-bottom: $font-size-md;
+    margin-top: $spacing-xl;
+  }
+}

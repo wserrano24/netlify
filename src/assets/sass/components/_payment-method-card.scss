@@ -1,0 +1,26 @@
+.theme-payment-method-card {
+  padding-bottom: $spacing-l;
+
+  &-description {
+    span {
+      font-size: $font-size-md;
+      font-weight: $theme-font-weight-bold;
+      margin: 0;
+    }
+  }
+
+  a {
+    @include link-primary-bold;
+
+    font-family: $theme-font-family-base;
+    font-size: $font-size-sm;
+  }
+
+  &-active {
+    color: $aa-green;
+  }
+
+  &-expired {
+    color: $aa-red;
+  }
+}

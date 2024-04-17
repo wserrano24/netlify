@@ -1,0 +1,41 @@
+.theme-swipeable-container {
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+.theme-swipeable-item {
+  grid-area: 1 / 1;
+  transition: transform 350ms ease-in-out;
+}
+
+.theme-swipeable-pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $spacing-xl;
+}
+
+.theme-swipeable-pagination-btn-group {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: $spacing-s 0 0;
+  padding: 0;
+}
+
+.theme-swipeable-pagination-btn {
+  width: $theme-pagination-dimension;
+  height: $theme-pagination-dimension;
+  background-color: $aa-black-blue;
+  border: 0;
+  border-radius: 50%;
+  margin-right: 1.188rem;
+  opacity: 0.2;
+  padding: 0;
+  transition: transform 200ms linear;
+}
+
+.theme-swipeable-pagination-btn.is-active {
+  opacity: 0.8;
+  transform: scale(1);
+}

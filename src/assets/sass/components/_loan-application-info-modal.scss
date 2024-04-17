@@ -1,0 +1,15 @@
+.theme-loan-application-info-modal {
+  margin-bottom: $spacing-m;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: $spacing-l;
+  }
+
+  .theme-btn {
+    height: 100%;
+
+    // Counteracts element left padding so the content
+    // looks aligned with other elements.
+    margin-left: -0.75rem;
+  }
+}

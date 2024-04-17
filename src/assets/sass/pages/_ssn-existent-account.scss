@@ -1,0 +1,73 @@
+.theme-ssn-existent-account {
+  width: 100%;
+
+  .theme-logo-mobile {
+    height: 1.5rem;
+    margin-top: $spacing-l;
+  }
+
+  h1 {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-m;
+    text-align: left;
+  }
+
+  p {
+    font-size: $font-size-md;
+    text-align: left;
+  }
+
+  &-wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &-footer {
+    align-items: center;
+    flex: 1;
+  }
+
+  &-mobile-image {
+    margin: $spacing-5xl auto $spacing-3xl;
+    margin-bottom: $spacing-3xl;
+    max-width: 260px;
+  }
+
+  &-desktop-image {
+    display: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    h1 {
+      font-size: $font-size-xxl;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: $spacing-xl;
+      text-align: center;
+    }
+
+    &-mobile-image {
+      display: none;
+    }
+
+    &-desktop-image {
+      display: inline-block;
+    }
+
+    &-footer {
+      margin-bottom: $spacing-5xl;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &-wrapper {
+      min-height: 100vh;
+
+      .theme-loader-gap {
+        padding-top: 30vh;
+      }
+    }
+  }
+}

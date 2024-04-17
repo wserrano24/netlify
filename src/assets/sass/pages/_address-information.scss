@@ -1,0 +1,13 @@
+.theme-address-information {
+  form {
+    flex-grow: 1;
+  }
+
+  &-cta {
+    button {
+      margin-bottom: $spacing-l;
+      max-width: 100%;
+      width: 19rem;
+    }
+  }
+}

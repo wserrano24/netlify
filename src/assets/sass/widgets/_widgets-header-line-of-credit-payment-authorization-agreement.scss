@@ -1,0 +1,74 @@
+.theme-line-of-credit {
+  &-header-link-mobile {
+    min-width: 6.875rem;
+    text-align: right;
+
+    button {
+      color: $aa-dark-blue;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &-summary {
+    border-top: 1px solid $aa-marble;
+    padding-top: $spacing-xl;
+
+    &-input-agreement {
+      padding-bottom: $spacing-l;
+
+      a {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      span {
+        &:last-of-type::before, &:first-of-type::after {
+          content: ' ';
+        }
+      }
+    }
+  }
+
+  .theme-line-of-credit-summary-form {
+    @include summary-screen-card-with-background;
+
+    padding: $spacing-xl $spacing-3xl;
+
+    .theme-line-of-credit-summary-container {
+      padding: $spacing-xl $spacing-m;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0;
+      }
+    }
+
+    label {
+      margin-bottom: $spacing-xs;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacing-xl;
+      }
+    }
+  }
+
+  .theme-key-value-text-icon {
+    .theme-key-value-text-label {
+      font-size: $font-size-md;
+      font-weight: $theme-font-weight-bold;
+    }
+  }
+
+  .theme-key-value-text-default {
+    .theme-key-value-text-value {
+      font-family: $theme-font-family-base;
+      font-size: $font-size-md;
+    }
+  }
+
+  .theme-line-of-credit-summary-button {
+    text-align: center;
+  }
+}

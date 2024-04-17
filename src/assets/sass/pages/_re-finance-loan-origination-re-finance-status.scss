@@ -1,0 +1,63 @@
+.theme-re-finance-loan-origination-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 44.5rem;
+  }
+
+  &-header {
+    .navbar-brand {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+
+  .theme-application-description {
+    border-bottom: 1px solid $aa-marble;
+    margin-bottom: $spacing-xl;
+
+    svg {
+      margin-bottom: $spacing-l;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: $spacing-m;
+      }
+    }
+  }
+
+  &-footer {
+    @include media-breakpoint-up(lg) {
+      .theme-widget-cta-wrapper {
+        &.theme-re-finance-loan-origination-status-footer-cta-wrapper {
+          margin-bottom: $spacing-l;
+        }
+      }
+    }
+
+    &-cta-wrapper {
+      &-download-link {
+        display: flex;
+        justify-content: center;
+        margin-bottom: $spacing-3xl;
+
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+
+        a {
+          @include link-primary-bold;
+        }
+      }
+    }
+  }
+
+  .theme-widget-cta-wrapper .theme-btn.btn {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}

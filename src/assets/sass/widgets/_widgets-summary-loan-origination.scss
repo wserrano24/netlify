@@ -1,0 +1,301 @@
+.theme-loan-origination-header {
+  @include media-breakpoint-up(lg) {
+    background: $aa-day-blue url('@/assets/images/modal_bg.png') bottom -400px right -800px no-repeat fixed;
+    border-radius: $theme-border-radius-lg;
+    margin-bottom: $spacing-4xl;
+    padding: $spacing-xxl $spacing-3xl $spacing-xs;
+    position: relative;
+
+    h1 {
+      font-size: $font-size-xxl;
+      margin: $spacing-3xl 0 $spacing-m;
+    }
+
+    &-description {
+      padding-top: $spacing-l;
+    }
+
+    &-float {
+      left: 0;
+      padding: $spacing-xxl $spacing-3xl;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &-small-logo-mobile {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .col-3,
+    &-small-logo-desktop {
+      display: none;
+    }
+
+    .theme-application-description {
+      >* {
+        &:last-child {
+          margin-bottom: $spacing-m;
+        }
+      }
+    }
+  }
+}
+
+.theme-loan-origination {
+  padding-top: $spacing-l;
+
+  &-pending-docs {
+    margin-top: $spacing-m;
+    padding: 0 $spacing-m;
+
+    @include media-breakpoint-up(lg) {
+      background-color: $aa-day-blue-lighter;
+      border-radius: $theme-border-radius;
+      margin: 0 0 $spacing-l;
+      padding: $spacing-l $spacing-xxl $spacing-xs;
+    }
+
+    &-icon {
+      margin-bottom: $spacing-s;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacing-m;
+      }
+    }
+
+    h2 {
+      font-size: $font-size-mdl;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacing-s;
+      }
+    }
+
+    p {
+      font-size: $font-size-sm;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+  &-summary {
+    @include media-breakpoint-down(lg) {
+      border-top: 1px solid $aa-marble;
+      margin-top: $spacing-m;
+      padding-top: $spacing-xl;
+    }
+
+    &-headline {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-m;
+
+      @include media-breakpoint-down(lg) {
+        font-size: $font-size-mdl;
+      }
+    }
+
+    &-card {
+      background-color: $aa-day-blue-lighter;
+      border-radius: $theme-border-radius $theme-border-radius 0 0;
+      padding: $spacing-m $spacing-m $spacing-xs;
+
+      @include media-breakpoint-down(lg) {
+        background-color: $aa-day-blue-light;
+      }
+
+      dt {
+        font-weight: normal;
+      }
+
+      dd {
+        font-weight: $theme-font-weight-bold;
+      }
+    }
+
+    &-card-header {
+      border-bottom: 1px solid $aa-day-blue;
+      margin-bottom: $spacing-xs;
+      padding-top: $spacing-s;
+
+      dt {
+        font-size: $font-size-xs;
+        margin-bottom: $spacing-s;
+      }
+
+      dd {
+        font-size: $font-size-md;
+      }
+    }
+
+    &-card-body {
+      border-bottom: 1px solid $aa-day-blue;
+      margin-bottom: $spacing-xs;
+      padding-bottom: $spacing-xs;
+      padding-top: $spacing-m;
+    }
+
+    &-card-final {
+      padding-top: $spacing-m;
+    }
+
+    &-pair-items {
+      dl {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      dt,
+      dd {
+        width: 50%;
+      }
+
+      dd {
+        text-align: right;
+      }
+
+      &-large span {
+        font-size: $font-size-md;
+        font-weight: $theme-font-weight-bold;
+      }
+    }
+
+    .theme-loan-origination-summary-button {
+      text-align: center;
+    }
+
+    .theme-loan-origination-summary-footer {
+      align-items: center;
+      background: $aa-day-blue;
+      border-radius: 0 0 $theme-border-radius $theme-border-radius;
+      box-shadow: $pf-box-shadow;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $spacing-m;
+      padding: $spacing-m 0;
+
+      &-icons-section {
+        display: flex;
+        justify-content: center;
+        margin: 0 $spacing-m;
+
+        button {
+          &:first-of-type {
+            @media (max-width:300px) {
+              margin-right: 0;
+            }
+          }
+
+          @include btn-transparent;
+
+          display: inline-flex;
+        }
+      }
+
+      a {
+        cursor: pointer;
+
+        @extend .link-primary;
+      }
+
+    }
+
+    .theme-loan-origination-summary-form {
+      @include summary-screen-card-with-background;
+
+      input {
+        padding-right: $spacing-xxl;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &-alert {
+      @include summary-screen-card-with-background;
+
+      margin-bottom: $spacing-xl;
+      padding: $spacing-xl $spacing-3xl;
+
+      @include media-breakpoint-down(lg) {
+        background-color: transparent;
+        margin-bottom: $spacing-m;
+        padding: $spacing-xl 0 $spacing-m;
+      }
+
+      &-no-bottom-spacing {
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      &-description {
+        font-size: $font-size-md;
+        margin-bottom: $spacing-xl;
+      }
+
+      &-description-has-border {
+        border-bottom: 1px solid $aa-marble;
+        font-size: $font-size-md;
+        margin-bottom: $spacing-xl;
+        padding-bottom: $spacing-m;
+      }
+
+      &-title {
+        font-family: $theme-font-family-secondary;
+        font-size: $font-size-mdl;
+        font-weight: $theme-font-weight-bold;
+      }
+
+      .theme-key-value-text-icon {
+        padding: 0 0 $spacing-l;
+
+        @include media-breakpoint-up(lg) {
+          border-bottom: 0;
+          padding: 0;
+        }
+      }
+
+      .theme-input-wrapper {
+        margin: $spacing-xl 0 0;
+
+        @include media-breakpoint-down(lg) {
+          border-bottom: 1px solid $aa-marble;
+          padding-bottom: $spacing-xl;
+        }
+      }
+    }
+
+    .theme-key-value-text-icon {
+      .theme-key-value-text-label {
+        font-size: $font-size-md;
+        font-weight: $theme-font-weight-bold;
+      }
+    }
+
+    .theme-key-value-text-default {
+      .theme-key-value-text-value {
+        font-family: $theme-font-family-base;
+        font-size: $font-size-md;
+      }
+    }
+
+    &-input-agreement {
+      padding-bottom: $spacing-l;
+    }
+  }
+}
+
+.theme-loan-origination-summary-section {
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+}

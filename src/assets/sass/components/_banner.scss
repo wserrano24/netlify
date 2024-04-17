@@ -1,0 +1,81 @@
+.theme-banner {
+  color: $aa-black-blue;
+  display: flex;
+  line-height: $theme-line-height-sm;
+  padding: $spacing-l $spacing-m;
+
+  @include media-breakpoint-up(md) {
+    border-radius: $theme-border-radius;
+  }
+
+  &-content {
+    color: $aa-black-blue;
+    font-family: $theme-font-family-base;
+    font-size: $font-size-sm;
+    line-height: $theme-line-height-md;
+    margin-left: $spacing-m;
+
+    p {
+      &:first-of-type {
+        font-weight: $theme-font-weight-bold;
+        margin-bottom: $spacing-xs;
+      }
+
+      &:last-of-type {
+        font-weight: $theme-font-weight-light;
+        margin-bottom: 0;
+
+        a {
+          border-bottom: 1px solid $aa-black-blue;
+          display: inline-block;
+          font-weight: $theme-font-weight-bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &-with-card {
+    border-radius: 0 0 0 0;
+  }
+
+  .banner-icon {
+    margin: 0 $spacing-m $spacing-m 0;
+  }
+
+  &-action-container {
+    /* adding margin at first immediate child, since
+     action container will appear for desktop with unknown child */
+    >* {
+      margin-left: $spacing-s;
+    }
+  }
+
+  // Different variations of banner
+
+  &-dark {
+    background-color: $aa-day-blue;
+  }
+
+  &-error {
+    background-color: $aa-red-lighter;
+  }
+
+  &-info {
+    background-color: $aa-day-blue-light;
+  }
+
+  &-success,
+  &-scheduled {
+    background-color: $aa-green-lighter;
+  }
+
+  &-warning {
+    background-color: $aa-goldenrod-light;
+  }
+
+  &-warning,
+  &-holiday {
+    background-color: $aa-goldenrod-light;
+  }
+}

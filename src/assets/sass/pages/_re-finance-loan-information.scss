@@ -1,0 +1,78 @@
+.theme-re-finance-loan-information {
+  .theme-loan-details-header {
+    @include media-breakpoint-up(lg) {
+      border-radius: 1rem 1rem 0 0;
+    }
+  }
+
+  &-timeline {
+    margin-bottom: $spacing-xl;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: $spacing-4xl;
+    }
+
+    &-title {
+      font-family: $theme-font-family-secondary;
+      font-size: $font-size-mdl;
+      font-weight: $theme-font-weight-bold;
+    }
+
+    .hide-timeline-progress-bar {
+      margin-bottom: 0;
+    }
+
+    .theme-timeline-progress-bar {
+      &::before {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: $font-size-sm;
+        line-height: $theme-line-height-md;
+      }
+    }
+
+    .entry {
+      margin-bottom: $spacing-m;
+      padding-bottom: $spacing-xs;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacing-l;
+      }
+    }
+
+    .entry-title {
+      margin-bottom: $spacing-xs;
+    }
+
+    .entry-text {
+      color: $aa-black-blue;
+      margin-bottom: 0;
+    }
+  }
+
+  &-cta-block {
+    &-faq-link {
+      color: $aa-black-blue;
+      font-weight: $theme-font-weight-bold;
+      margin-bottom: $spacing-xxl;
+      text-decoration: none;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+        margin-bottom: $spacing-3xl;
+      }
+    }
+
+    &-links {
+      a {
+        width: 12.5rem;
+
+        &:first-of-type {
+          @include media-breakpoint-down(lg) {
+            width: 8.133rem;
+          }
+        }
+      }
+    }
+  }
+}

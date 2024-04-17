@@ -1,0 +1,196 @@
+.theme-form {
+  margin-bottom: $spacing-m;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: $spacing-l;
+  }
+
+  &-footer {
+    margin-top: $spacing-xl;
+  }
+
+  &-disclaimer-cta {
+    border: 0;
+    font-family: $theme-font-family-base;
+  }
+}
+
+// FORMS
+
+
+// INPUTS
+// TODO: Need solution to fix initial border 1px and focus border 2px moving content
+
+input {
+  box-shadow: $pf-box-shadow-inset;
+
+  &:active {
+    border: 2px solid $aa-goldenrod;
+  }
+
+  // TODO: Hard coded active state for demonstration purposes
+  &.is-active {
+    border: 2px solid $aa-goldenrod;
+  }
+
+  &.is-password {
+    padding-right: 40px;
+  }
+}
+
+// Text Align Solution on iOS
+input::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+// NOTE: Preventing iPhone Form Zooming. This rule only applies to iOS mobile version
+@supports (-webkit-touch-callout: none) {
+  @include media-breakpoint-down(sm) {
+    input.form-control:active {
+      font-size: 1rem;
+    }
+  }
+}
+
+.not-valid {
+  border: 2px solid $aa-red;
+}
+
+// Class that hides the file input and sets an absolute
+// position to the element that is displayed in the UI
+.theme-input-file {
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  ::-webkit-file-upload-button {
+    cursor: pointer;
+  }
+
+  input[type='file'] {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    filter: opacity(0);
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.theme-input-wrapper {
+  margin-bottom: $spacing-m;
+  position: relative;
+
+  .form-label {
+    font-family: $theme-font-family-secondary;
+  }
+}
+
+.theme-input-icon-wrapper {
+  position: relative;
+
+  .theme-input-icon {
+    width: $theme-icon-md;
+    height: $theme-icon-md;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.theme-input-label-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control-plaintext {
+  box-shadow: none;
+}
+
+.theme-validation {
+  img {
+    display: inline-block;
+    margin-right: $spacing-m;
+  }
+
+  .invalid-feedback {
+    align-items: center;
+    column-gap: 6px;
+    display: flex;
+  }
+}
+
+p.form-text {
+  margin-bottom: 0;
+}
+
+// RADIO
+.pf-radio {
+  background: $aa-day-blue-light;
+  border-radius: $theme-border-radius;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: $spacing-s;
+  padding: $spacing-m;
+
+  &.pf-checked {
+    background: $aa-y-gradient;
+  }
+
+  .form-check-input {
+    background: $white;
+    border: 1px solid $white;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: $spacing-s;
+    transform: scale(1.3);
+  }
+
+  .form-check-input:checked {
+    background: $aa-dark-blue;
+  }
+
+  label {
+    cursor: pointer;
+    margin-left: $spacing-s;
+  }
+}
+
+// CHECKBOX
+.theme-form-checkbox {
+  align-items: center;
+  display: flex;
+  margin: 0;
+
+  label {
+    cursor: pointer;
+    margin-left: 0.75rem;
+  }
+
+  &-danger {
+    border: 2px solid $aa-red;
+  }
+}
+
+// SELECT
+select option {
+  border-radius: $theme-border-radius;
+  color: $black;
+  padding: $spacing-m;
+
+  &:checked {
+    color: $black;
+  }
+
+  &:hover {
+    color: $black;
+    font-weight: 600;
+  }
+}
+
+.form-select {
+  height: auto;
+  overflow-y: auto;
+}

@@ -1,0 +1,97 @@
+.theme-key-value-text {
+  $block: &;
+
+  color: $aa-black-blue;
+  display: flex;
+  flex: 1;
+
+  &>* {
+    display: inline-block;
+  }
+
+  &-heading {
+    #{$block}-label {
+      color: $aa-black-blue;
+      font-size: $font-size-md;
+      font-weight: $theme-font-weight-bold;
+      line-height: $theme-line-height-md;
+    }
+  }
+
+  &-label {
+    font-size: $font-size-sm;
+    line-height: $theme-line-height-md;
+  }
+
+  // TODO: Remove and replace all uses with mixin link-row
+  &-icon {
+    border-bottom: 1px solid $aa-marble;
+    padding: $spacing-l 0 $spacing-s;
+  }
+
+  &-more-link {
+    color: $aa-dark-blue;
+    font-weight: $theme-font-weight-bold;
+    line-height: 1.3;
+  }
+
+  &-modal-opener-button {
+    @include btn-transparent;
+    padding: 0;
+    text-align: left;
+    display: inline-flex;
+  }
+
+  &-value {
+    font-family: $theme-font-family-secondary;
+    font-weight: $theme-font-weight-bold;
+    line-height: $theme-line-height-md;
+    text-align: right;
+  }
+
+  &-column {
+    flex-direction: column;
+
+    #{$block}-label {
+      margin-top: $spacing-m;
+      text-align: center;
+    }
+
+    #{$block}-value {
+      font-size: $font-size-lg;
+      letter-spacing: -0.02em;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        font-size: $font-size-xl;
+        line-height: $theme-line-height-sm;
+      }
+    }
+  }
+
+  &-row {
+    flex-direction: row;
+    justify-content: space-between;
+
+    #{$block}-label {
+      margin-bottom: $spacing-s;
+      text-align: center;
+    }
+
+    #{$block}-value {
+      font-size: $font-size-md;
+    }
+  }
+}
+
+// For small devices in 200% zoom mode
+@media (max-width: 300px) {
+  .theme-key-value-text {
+    display: block;
+  }
+
+  .theme-key-value-text-row .theme-key-value-text-label {
+    display: block;
+    text-align: left;
+  }
+}

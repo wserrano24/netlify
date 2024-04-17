@@ -1,0 +1,144 @@
+/* stylelint-disable no-descending-specificity */
+.theme-global-footer-dashboard {
+  @include tablet-layout-spacing;
+
+  background: linear-gradient(180deg, $aa-dark-blue 0%, rgb(14 64 106 / 0%) 100%), $aa-black-blue;
+  color: $aa-white;
+  padding-bottom: $spacing-xl;
+  padding-top: $spacing-xl;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $spacing-3xl;
+    padding-top: $spacing-3xl;
+  }
+
+  .footer-link {
+    color: $aa-white;
+    transition: 0.3s all;
+
+    &:hover {
+      color: $aa-light-blue;
+    }
+  }
+
+  &-icons {
+    margin-top: $spacing-xl;
+  }
+
+  &-link-widget {
+    margin-bottom: $spacing-m; // Required 32px bottom margin, calculating 16px from last li tag and applying 16 here i.e (16+16 = 32)
+
+    h5 {
+      border-bottom: 1px solid $aa-marble;
+      font-size: $font-size-mdl;
+      margin-bottom: $spacing-m;
+      padding-bottom: $spacing-s;
+    }
+
+    li {
+      margin-bottom: $spacing-m;
+
+      .widget-item-link {
+        font-size: $font-size-sm;
+        text-decoration: none;
+
+        @include media-breakpoint-up(lg) {
+          font-size: $font-size-md;
+        }
+      }
+    }
+  }
+
+  &-privacy-links {
+    a {
+      color: $aa-marble;
+      font-size: $font-size-sm;
+      line-height: $theme-line-height-md;
+      margin-left: 0;
+      position: relative;
+      text-decoration: underline;
+
+      &:last-of-type {
+        margin-left: $spacing-l;
+      }
+
+      @include media-breakpoint-up(lg) {
+        &:first-of-type {
+          margin-right: $spacing-l;
+        }
+
+        &:last-of-type {
+          &::before {
+            width: 1px;
+            height: 0.75rem;
+            background-color: $aa-white;
+            content: '';
+            left: (-$spacing-l); // Using spacing variable since position will be based upon spacing variable.
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+  }
+
+  &-social-links {
+    margin-bottom: $spacing-xl;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-right: $spacing-m;
+
+      a {
+        svg {
+          path {
+            transition: 0.3s all;
+          }
+        }
+
+        &:hover {
+          svg {
+            path {
+              stroke: $aa-light-blue;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-copyright-details {
+    border-top: 1px solid $aa-marble;
+    margin-top: $spacing-l;
+    padding-top: $spacing-l;
+
+    p {
+      font-size: $font-size-sm;
+      margin-bottom: 0;
+      margin-top: $spacing-m;
+    }
+  }
+
+  .theme-global-footer-images {
+    margin-bottom: $spacing-m;
+
+    .theme-ola-member-seal-image-wrapper {
+      margin-left: $spacing-l;
+
+      // TODO: Needs to verify on a main website once it will be deployed
+      img {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+}

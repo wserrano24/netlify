@@ -1,0 +1,10 @@
+.theme-global-application-header {
+  &.theme-store-locator-header {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      margin-bottom: $x-large;
+    }
+  }
+}

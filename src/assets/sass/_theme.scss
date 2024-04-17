@@ -1,0 +1,111 @@
+/*
+1. DESIGN VARIABLES
+These are specific to the Figma PF Design Kit. They are all namespaced with "$aa-" to denote they are custom to the Advance America project.
+*/
+
+// Variable definitions based on PF Figma Design Kit
+@import './design-system/_colors';
+@import './design-system/_typography';
+@import './design-system/_spacing';
+
+// TODO: verify against design kit, update name, add to colors file
+$pf-gradient-progress-bar: linear-gradient(90deg, #ffc429 25.62%, #3ac178 63.88%), #c4c4c4;
+
+// Shadows
+$pf-box-shadow: 0 2px 2px rgb(0 0 0 / 16%);
+$pf-box-shadow-dark: 0 2px 2px 0 rgb(14 64 106 / 16%);
+$pf-box-shadow-inset: inset 0 2px 2px rgb(0 0 0 / 16%);
+$pf-notification-box-shadow: 0 2px 2px rgb(14 64 106 / 10%);
+$pf-box-shadow-sticky: 0 -2px 50px rgb(0 0 0 / 6%);
+$pf-box-shadow-inset-light: inset 0 2px 2px rgb(0 0 0 / 8%);
+
+
+
+// TODO: needs cleanup
+$pf-btn-min-width-md: 12.5rem;
+$pf-btn-min-width-sm: 8rem;
+$pf-btn-min-width-xs: 7.5rem;
+
+/*
+2. THEME VARIABLES
+These are passed into the Bootstrap _variables.scss file
+to implement changes based on the project DESIGN VARIABLES
+above. This allows all future changes to be controlled from
+this file.
+*/
+
+// Font weights
+$theme-font-weight-lightest: 300;
+$theme-font-weight-light: 400;
+$theme-font-weight-medium: 500;
+$theme-font-weight-bold: 600;
+$theme-form-label-font-weight: 600;
+
+// Line height
+$theme-line-height-sm: 1.2;
+$theme-line-height-md: 1.4;
+
+// Colors
+$theme-primary: $aa-black-blue;
+$theme-danger: $aa-red;
+$theme-body-color: $aa-black-blue;
+
+// Fonts
+$theme-font-family-base: 'Inter';
+$theme-font-family-secondary: 'Poppins';
+$theme-heading-font-family: $theme-font-family-secondary;
+$theme-font-size-base: 0.875rem;
+$theme-body-font-size: 0.875rem;
+
+// Buttons
+$theme-btn-border-radius: 1.5rem;
+$theme-btn-border-width: 2px;
+$theme-btn-font-size: 0.875rem;
+$theme-btn-font-weight: $theme-font-weight-bold;
+
+// TODO: Do we use another variable for these values?
+// Accordion
+$theme-accordion-icon-width: 12px;
+$theme-accordion-icon-height: 6px;
+
+// dropdown
+$theme-dropdown-width: 100%;
+$theme-dropdown-transition-time: 0.1s;
+$theme-dropdown-item-padding-y: 1rem;
+$theme-dropdown-link-active-color: $aa-black-blue;
+$theme-dropdown-link-active-bg: unset;
+
+// Badges
+$theme-badge-padding-y: 0.3125rem;
+$theme-badge-padding-x: 0.75rem;
+
+// Buttons Pills
+$theme-btn-nav-pills-border-radius: 100px;
+
+// Misc
+$theme-border-radius: 0.5rem;
+$theme-border-radius-lg: 1.5rem;
+$theme-pagination-dimension: 0.375rem;
+
+// Icons
+$theme-icon-sm: 1rem;
+$theme-icon-md: 1.5rem;
+$theme-icon-lg: 2rem;
+
+// Offcanvas
+// TODO: Address the horizontal width with breakpoints.
+$theme-offcanvas-horizontal-width: 80vw;
+$theme-offcanvas-horizontal-height: 70vh;
+$theme-offcanvas-backdrop-bg: $aa-dark-blue;
+$theme-offcanvas-backdrop-opacity: .8;
+
+// Modals
+$theme-modal-backdrop-bg: $aa-black-blue;
+$theme-modal-backdrop-opacity: .8;
+$theme-modal-footer-border-width: 0;
+$theme-modal-header-border-width: 0;
+
+// Global Navigation
+$theme-naviagtion-padding-top-desktop: 10.5rem;
+$theme-naviagtion-padding-top-mobile: 5.5rem;
+$theme-navigation-z-index: 1030;

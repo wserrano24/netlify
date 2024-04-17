@@ -1,0 +1,22 @@
+.progress-bar-container {
+  background: $aa-marble;
+  border-radius: 1.563rem;
+  height: 0.438rem;
+  position: relative;
+}
+
+.progress-bar-indicator {
+  border-radius: 1.563rem;
+  height: 100%;
+  mask: linear-gradient(white 0 0);
+}
+
+.progress-bar-indicator::before {
+  background: $pf-gradient-progress-bar;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

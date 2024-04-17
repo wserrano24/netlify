@@ -1,0 +1,79 @@
+.theme-connect-plaid {
+  &-header {
+    margin-bottom: $spacing-xxl;
+
+    button {
+      @include link-primary-bold;
+    }
+  }
+
+  .theme-application-description {
+    img {
+      margin-bottom: $spacing-l;
+      width: 94px;
+
+      @include media-breakpoint-up(lg) {
+        width: 139px;
+      }
+    }
+  }
+
+  .card {
+    margin-bottom: $spacing-m;
+  }
+
+  .card:last-of-type {
+    margin-bottom: $spacing-3xl;
+
+    button {
+      padding: 0;
+    }
+  }
+
+  &-timeline {
+    margin-bottom: $spacing-xl;
+
+    .navbar-brand {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    .theme-timeline {
+      .hide-timeline-progress-bar {
+        margin: 0;
+      }
+
+      .title {
+        font-size: $font-size-mdl;
+        margin: 0;
+      }
+
+      .timeline-title {
+        margin: $spacing-m 0 $spacing-l;
+      }
+
+      .entry {
+        padding-bottom: $spacing-m;
+
+        @include media-breakpoint-up(lg) {
+          padding-bottom: $spacing-xl;
+        }
+
+        &-text {
+          color: $aa-black-blue;
+          margin-bottom: 0;
+        }
+      }
+
+      .entry-title {
+        margin-bottom: $spacing-xs;
+      }
+    }
+  }
+
+  &-footer {
+    font-weight: $theme-font-weight-bold;
+    text-decoration: underline;
+  }
+}

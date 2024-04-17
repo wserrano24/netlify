@@ -1,0 +1,130 @@
+.theme-profile-my-documents {
+  .theme-block-row {
+    margin-bottom: $spacing-xl;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacing-4xl;
+    }
+  }
+
+  h1 {
+    font-size: $font-size-xl;
+  }
+
+  .theme-btn {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-contents {
+    .theme-upload-document-link {
+      font-family: $theme-font-family-base;
+      padding-left: 0;
+
+      @include link-primary-bold;
+    }
+
+    @include accordion-disclosure;
+
+    .theme-key-value-text-label.theme-profile-my-documents-filename {
+      @include ellipses;
+
+      max-width: 75vw;
+      text-align: left;
+
+      @include media-breakpoint-up(md) {
+        max-width: 27rem;
+      }
+    }
+
+    .accordion {
+      $large-icon-dimension: 1.25rem;
+
+      &-item {
+        @include media-breakpoint-down(lg) {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+
+      margin-bottom: $spacing-xl;
+      padding: 0;
+
+      &-body {
+        padding: 0;
+      }
+
+      &-button {
+        padding: 0;
+      }
+
+      // Below style (.accordion-collapse) is for subsection (i.e Proof of Income)
+      &-collapse {
+        .accordion {
+          border-bottom: 1px solid $aa-marble;
+          margin: 0;
+          padding: $spacing-l 0;
+
+          &:last-of-type {
+            border: 0;
+          }
+
+          &-button {
+            @include media-breakpoint-down(lg) {
+              font-size: $font-size-sm;
+            }
+          }
+        }
+      }
+
+      // Below style (.accordion-button) is for parent level header (i.e Uploaded documents)
+      &-button:not(.accordion-body .accordion-button) {
+        font-family: $theme-font-family-secondary;
+        font-size: $font-size-mdl;
+
+        &::after {
+          width: $large-icon-dimension;
+          height: $large-icon-dimension;
+          background-size: $large-icon-dimension;
+        }
+      }
+
+      .theme-key-value-text-icon {
+        align-items: center;
+        border: none;
+        display: flex;
+        padding: 0;
+
+        .theme-key-value-text-label {
+          margin-bottom: 0;
+        }
+      }
+
+      ul {
+        margin-bottom: 0;
+        margin-top: $spacing-m;
+        padding: 0;
+
+        li {
+          margin-bottom: $spacing-m;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .theme-download-link {
+            border: 0;
+            display: flex;
+            font-family: $theme-font-family-base;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

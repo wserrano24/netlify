@@ -1,0 +1,23 @@
+.theme-store-locator-map {
+  width: 100%;
+  height: 31.25rem;
+  clip-path: none;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    clip-path: inset(0 0 0 0 round $theme-border-radius);
+    min-height: 52.5rem;
+  }
+
+  &-back {
+    display: block;
+    left: $spacing-l;
+    position: absolute;
+    top: $spacing-l;
+    z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}

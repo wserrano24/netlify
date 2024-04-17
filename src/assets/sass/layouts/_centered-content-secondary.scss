@@ -1,0 +1,15 @@
+.theme-layout-centered-secondary {
+  align-items: center;
+  background: $aa-day-blue url('@/assets/images/modal_bg.png') no-repeat;
+  background-position: -13rem 14rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  @include media-breakpoint-up(lg) {
+    background: $aa-day-blue url('@/assets/images/backgrounds/circle_bg.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
+

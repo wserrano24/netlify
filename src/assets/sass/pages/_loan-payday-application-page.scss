@@ -1,0 +1,93 @@
+// TODO: Once the spacing variable is updated make sure to update that here as well.
+
+.theme-new-loan {
+  height: 100%;
+
+  @include media-breakpoint-up(lg) {
+    .theme-loan-details-header {
+      border-radius: 1rem 1rem 0 0;
+    }
+  }
+
+  &-content-wrapper {
+    min-height: calc(100vh - 7.5625rem);
+
+    // 7.5625rem is header height
+    padding: $spacing-l $spacing-l $spacing-xl;
+
+    @include media-breakpoint-up(lg) {
+      min-height: 100%;
+      padding: $spacing-3xl $spacing-3xl $spacing-xl;
+    }
+
+    @include tablet-layout-spacing;
+  }
+
+  &-widget-description {
+    margin-bottom: $spacing-xl;
+
+    h1 {
+      color: $aa-black-blue;
+      font-size: $font-size-lg;
+      letter-spacing: -0.02em;
+      line-height: $theme-line-height-sm;
+      margin-bottom: $spacing-m;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-xl;
+      }
+    }
+
+    p {
+      color: $aa-black-blue;
+      font-size: $font-size-sm;
+      line-height: $theme-line-height-sm;
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+  &-cta-block {
+    margin: $spacing-xxl auto 0 auto;
+    max-width: 100%;
+    width: 19rem;
+
+    a {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+    }
+  }
+
+  // Adding required styles for timeline since it's not matching with the existing design of the timeline page
+  .theme-timeline {
+    .hide-timeline-progress-bar {
+      margin: 0;
+    }
+
+    .title {
+      margin-bottom: $spacing-m;
+    }
+
+    .entry {
+      // In a design it's 48px and we don't have variable for that so using nearest value for padding.
+      padding-bottom: $spacing-xxl;
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: $spacing-xl;
+      }
+
+      &-text {
+        color: $aa-black-blue;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

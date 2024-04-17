@@ -1,0 +1,19 @@
+.theme-cta-government-id {
+  flex-direction: column;
+  flex-grow: 1;
+
+  .alert-success {
+    margin-top: $spacing-s;
+
+    @include media-breakpoint-up(md) {
+      margin-top: $spacing-m;
+    }
+  }
+
+  &-done {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: $spacing-l 0;
+  }
+}

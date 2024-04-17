@@ -1,0 +1,23 @@
+.theme-account-details-menu {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+
+    .theme-key-value-text {
+      @include link-row;
+
+      .theme-key-value-text-label {
+        color: $aa-black-blue;
+        font-size: $font-size-md;
+        font-weight: $theme-font-weight-bold;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  footer {
+    margin-top: auto;
+  }
+}

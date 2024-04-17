@@ -1,0 +1,36 @@
+.widget-alert-ccpa {
+  button {
+    border-radius: 0;
+    font-family: $theme-font-family-base;
+    font-weight: $theme-font-weight-bold;
+    padding: 0;
+    text-align: left;
+
+    @media screen and (max-width:300px) {
+      border: none;
+    }
+  }
+
+  span {
+    &:first-of-type {
+      &::after {
+        content: '';
+      }
+    }
+
+    &:last-of-type {
+      &::before {
+        content: '';
+      }
+    }
+  }
+
+  @media screen and (max-width:300px) {
+    .theme-alert-icon {
+      svg {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+    }
+  }
+}

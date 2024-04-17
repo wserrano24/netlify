@@ -1,0 +1,31 @@
+.theme-profile-menu {
+  nav {
+    ul {
+      padding: 0;
+
+      li {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+  .theme-key-value-text-label {
+    color: $aa-black-blue;
+    font-size: $font-size-md;
+    font-weight: $theme-font-weight-bold;
+  }
+
+  &-logout {
+    button {
+      background: none;
+      border: none;
+      color: $aa-red;
+      font-size: $font-size-md;
+      font-weight: $theme-font-weight-bold;
+      padding: $spacing-l 0;
+    }
+  }
+}
